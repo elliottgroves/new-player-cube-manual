@@ -25,7 +25,7 @@ export default function App() {
 
 function Layout() {
   return (
-    <div>
+    <div className="main-layout">
       <nav className="main-nav">
         <Link to="/" className="home-logo-link">
           <img src={logo} className="logo" />
@@ -64,7 +64,7 @@ function Home() {
       <h2>First time?</h2>
 
       <Link to="/welcome">
-        <button>
+        <button className="large-nav-button">
           <h2>Welcome to Magic!</h2>
         </button>
       </Link>
@@ -72,17 +72,17 @@ function Home() {
       <h2>Ready to play?</h2>
 
       <Link to="/build">
-        <button>
+        <button className="large-nav-button">
           <span>Build your deck</span>
         </button>
       </Link>
       <Link to="/tutorial">
-        <button>
+        <button className="large-nav-button">
           <span>How to play</span>
         </button>
       </Link>
       <Link to="/cheat-sheet">
-        <button>
+        <button className="large-nav-button">
           <span>Turn cheat sheet</span>
         </button>
       </Link>

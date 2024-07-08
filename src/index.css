@@ -35,7 +35,7 @@ button:hover, button:focus {
   outline: 2px solid grey;
 }
 
-#root {
+.main-layout {
   min-height: 100svh;
 }
 

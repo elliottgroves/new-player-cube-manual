@@ -1,4 +1,5 @@
 import RelativeNavHeader from './relative-nav.js';
+import { Link } from 'react-router-dom';
 
 export default function WelcomePage() {
   return (
@@ -16,6 +17,10 @@ export default function WelcomePage() {
       <img src="https://api.scryfall.com/cards/named?exact=Centaur+Courser&amp;format=image&amp;version=normal" width="215" height="300" />
 
       <p>Tap a card above to learn more about its type. Once you’re ready, we can talk about how you’ll build your first deck.</p>
+
+      <Link to="/build">
+        <button className="large-nav-button">Build my deck</button>
+      </Link>
     </section>
   );
 }
