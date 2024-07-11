@@ -59,11 +59,14 @@
 .large-nav-button {
   width: 100%;
   text-align: center;
+  color: #FCF5E5;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .main-footer {
   flex-grow: 1;
-  margin-top: 10rem;
+  margin-top: 5rem;
   padding: 2rem 1rem 10rem 1rem;
   background-color: #78a8e6;
 }
@@ -76,5 +79,9 @@
 @media only screen and (min-width: 768px) {
   .main-nav ul {
     display: flex;
+  }
+
+  .main-footer {
+    margin-top: 8rem;
   }
 }

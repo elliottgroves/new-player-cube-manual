@@ -6,7 +6,7 @@ body {
   margin: 0;
   background-color: #FCF5E5;
   min-height: 100svh;
-  color: #121212;
+  color: #121248;
 }
 
 p {
@@ -22,6 +22,7 @@ a:has(button) {
 
 button {
   background: orange;
+  color: #FCF5E5;
   border: none;
   outline: none;
   padding: 0.5rem 1.5rem;
@@ -33,6 +34,10 @@ button {
 
 button:hover, button:focus {
   outline: 2px solid grey;
+}
+
+.card {
+  border-radius: 10px;
 }
 
 .main-layout {

@@ -2,7 +2,11 @@ import './App.css';
 import logo from './placeholder-logo.svg';
 import Welcome from './welcome.js';
 import Build from './build.js';
+import GridSetup from './grid-setup.js';
+import DraftSetup from './draft-setup.js';
+import FinishBuild from './finish-build.js';
 import Tutorial from './tutorial.js';
+import Instants from './instants.js';
 import CheatSheet from './cheat-sheet.js';
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 
@@ -15,7 +19,11 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="welcome" element={<Welcome />} />
           <Route path="build" element={<Build />} />
+          <Route path="grid-setup" element={<GridSetup />} />
+          <Route path="draft-setup" element={<DraftSetup />} />
+          <Route path="finish-build" element={<FinishBuild />} />
           <Route path="tutorial" element={<Tutorial />} />
+          <Route path="instants" element={<Instants />} />
           <Route path="cheat-sheet" element={<CheatSheet />} />
         </Route>
       </Routes>

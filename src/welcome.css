@@ -1,0 +1,18 @@
+.welcome-card-group {
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.welcome-card-group .card-one {
+  transform: translate(10px, 20px) rotate(-5deg);
+  z-index: 1;
+}
+
+.welcome-card-group .card-two {
+  z-index: 2;
+}
+
+.welcome-card-group .card-three {
+  transform: translate(-10px, 20px) rotate(5deg);
+  z-index: 1;
+}
