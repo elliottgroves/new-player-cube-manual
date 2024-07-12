@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -42,9 +46,4 @@ button:hover, button:focus {
 
 .main-layout {
   min-height: 100svh;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

@@ -12,7 +12,7 @@ import { Routes, Route, Outlet, Link } from 'react-router-dom';
 
 export default function App() {
   return (
-    <div>
+    <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -27,7 +27,7 @@ export default function App() {
           <Route path="cheat-sheet" element={<CheatSheet />} />
         </Route>
       </Routes>
-    </div>
+    </>
   );
 }
 
@@ -100,8 +100,8 @@ function Home() {
 
 function About() {
   return (
-    <div>
+    <section>
       <p>Card images are from <a href="https://scryfall.com" target="_blank">Scryfall</a>.</p>
-    </div>
+    </section>
   );
 }

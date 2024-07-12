@@ -1,0 +1,76 @@
+.book {
+  width: 100%;
+  max-width: min(500px, 80vw);
+  aspect-ratio: 2/3;
+  position: relative;
+  background: maroon;
+  color: gold;
+  transform: translateX(30px);
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  background: maroon;
+  width: 30px;
+  height: 100%;
+  left: -31px;
+  border-right: 1px solid gold;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tap-text {
+  font-size: 1.2rem;
+}
+
+.book-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column;
+  gap: 1rem;
+  z-index: 5;
+  background: maroon;
+  transition: transform 0.8s ease;
+  will-change: transform;
+}
+
+.book-cover.open {
+  transform: translateX(-100%) scaleX(-1);
+}
+
+.page-bg {
+  overflow-y: scroll;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 0;
+  background: linear-gradient(90deg, grey, #FCF5E5 1.25rem);
+  color: #121248;
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.page-bg h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.page-bg image {
+  flex-grow: 1;
+}
