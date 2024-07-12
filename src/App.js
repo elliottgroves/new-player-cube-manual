@@ -37,7 +37,7 @@ function Layout() {
       <nav className="main-nav">
         <Link to="/" className="home-logo-link">
           <img src={logo} className="logo" />
-          <h1>New Player Cube</h1>
+          <h1>Welcome Cube</h1>
         </Link>
 
         <ul>

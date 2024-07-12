@@ -55,6 +55,8 @@
   animation: push-back 1s forwards;
 }
 
+/* fix z-index, still doesn't work if flip page too fast. */
+/* should become 1 at the halfway point of the transition ideally */
 @keyframes push-back {
   0% {
     z-index: 5;
