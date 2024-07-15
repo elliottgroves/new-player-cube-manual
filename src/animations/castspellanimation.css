@@ -4,7 +4,7 @@
   display: flex;
   flex-flow: column;
   gap: 0.5rem;
-  background: grey;
+  background: linear-gradient(grey, transparent 45%);
   border-radius: 14px;
 }
 
@@ -27,6 +27,7 @@
   will-change: opacity;
   position: absolute;
   animation-delay: 5s;
+  filter: drop-shadow(0 0 5px orange);
 }
 .mana-cost .mana.one {
   right: 32%;
@@ -69,11 +70,11 @@
   animation-delay: 3.6s;
 }
 .mana-pool .mana.two {
-  left: 40%;
+  left: 42.5%;
   animation-delay: 2.8s;
 }
 .mana-pool .mana.three {
-  left: 70%;
+  left: 75%;
   animation-delay: 2s;
 }
 @keyframes addMana {
