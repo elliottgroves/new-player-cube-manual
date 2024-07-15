@@ -1,0 +1,140 @@
+.cast-spell-animation {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+  background: grey;
+  border-radius: 14px;
+}
+
+.centaur-courser {
+  width: 100%;
+  aspect-ratio: 6.25/1;
+  object-fit: cover;
+  object-position: 0% 0%;
+  border-radius: 16px 16px 0 0;
+  align-self: center;
+}
+
+.mana-cost {
+  position: relative;
+  height: 110px;
+}
+.mana-cost .mana {
+  height: auto;
+  width: 25%;
+  will-change: opacity;
+  position: absolute;
+  animation-delay: 5s;
+}
+.mana-cost .mana.one {
+  right: 32%;
+}
+.mana-cost .mana.two {
+  right: 2%;
+}
+@keyframes manaCost {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.mana-pool {
+  position: relative;
+  height: 90px;
+}
+.mana-pool .mana {
+  animation: addMana 6s ease infinite;
+  will-change: transform, opacity;
+  opacity: 0;
+  position: absolute;
+  height: auto;
+  width: 20%;
+}
+.mana-pool .mana.one {
+  left: 10%;
+  animation-delay: 3.6s;
+}
+.mana-pool .mana.two {
+  left: 40%;
+  animation-delay: 2.8s;
+}
+.mana-pool .mana.three {
+  left: 70%;
+  animation-delay: 2s;
+}
+@keyframes addMana {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.lands {
+  position: relative;
+  height: 240px;
+}
+.land {
+  position: absolute;
+  height: auto;
+  width: 40%;
+  max-width: 300px;
+  border-radius: 4%;
+  animation: rotateLand 6s ease infinite;
+  will-change: transform;
+}
+.land.one {
+  left: 10%;
+  animation-delay: 3.6s;
+}
+.land.two {
+  left: 30%;
+  animation-delay: 2.8s;
+}
+.land.three {
+  left: 50%;
+  animation-delay: 2s;
+}
+@keyframes rotateLand {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

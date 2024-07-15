@@ -1,6 +1,7 @@
 import './tutorial.css';
 import RelativeNavHeader from './relative-nav.js';
 import { Link } from 'react-router-dom';
+import CastSpellAnimation from './animations/CastSpellAnimation.js';
 
 export default function TutorialPage() {
   return (
@@ -55,15 +56,17 @@ Each turn, you can play one land, spend mana from your lands to pay for spells, 
     </section>
     <section className="main-phase-section">
       <h3>Main Phase</h3>
-      <p>Each turn, you get to play one land card from your hand. Then, you can add mana from your lands to pay for the mana cost of any cards you want. You do that by tapping the lands you want to add mana from, by turning them sideways to show that you’ve used them. Here’s an example:</p>
+      <p>Each turn, you get to play one land card from your hand.</p>
+    <p>Then, you can <b>add mana</b> from your <b>lands</b> to pay for the <b>mana cost</b> of any cards you want. You do that by <b>tapping</b> the lands you want to add mana from - turn them sideways to show that you’ve used them. Here’s an example:</p>
 
-      <p>[Grizzly Bears] is a creature that has a mana cost of 1G. This means you can use one green mana and one mana of any color to pay for [Grizzly Bears]. Each land adds one mana per turn - even though you tapped it this turn, each turn starts by untapping all your cards.
+      <CastSpellAnimation />
 
-That’s it for the main phases! You can play one land card per turn during either main phase, and then tap lands to play spells during your main phase.</p>
+      <p>Centaur Courser is a creature that has a mana cost of 2G. This means you can use one green mana and two mana of any color to pay for Centaur Courser. Each land adds one mana per turn - even though you tapped it this turn, each turn starts by untapping all your cards.</p>
+
+<p>That’s it for the main phases! You can play one land card per turn during either main phase, and then tap lands to play spells during your main phase.</p>
     </section>
     <section className="combat-section">
     <h3>Combat</h3>
-    <p>
       <ul>TL;DR:
         <li>Attack your opponent by tapping creatures you've controlled since last turn</li>
         <li>Your opponent can block with their untapped creatures. Multiple creatures can block one attacker.</li>
@@ -92,9 +95,6 @@ You show that your creatures are attacking your opponent by tapping them, just l
       <p>Your opponent is attacking you with a 4/4 (4 power, 4 toughness). You have two untapped creatures - a 2/2 and a 3/3. You can block the 4/4 with both of your creatures, then the attacking player orders the blockers in the order they'd like to damage them.</p>
 
       <p>If they order your 3/3 first, it'll take 3 damage which is enough to kill it, and the 4/4 still has 1 damage to deal. It deals 1 damage to the 2/2, leaving it alive.</p>
-      </p>
-      
-      
     </section>
     <section className="instant-cards-section">
       <h3>Instant Cards</h3>

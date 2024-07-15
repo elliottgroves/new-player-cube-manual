@@ -55,8 +55,12 @@ function Layout() {
       </main>
 
       <footer className="main-footer">
+        <p>This site is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC.</p>
         <p>
-          Card images courtesy of <a href="https://scryfall.com" target="_blank">Scryfall</a>!
+          This site may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under <a href="https://company.wizards.com/en/legal/fancontentpolicy" target="_blank" rel="noreferrer">Wizards’ Fan Site Policy</a>. For example, Magic: The Gathering® is a trademark of Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards’ trademarks or other intellectual property, please visit their website at <a href="https://magic.wizards.com" target="_blank" rel="noreferrer">magic.wizards.com</a>. 
+        </p>
+        <p>
+          This site also uses card images created on <a href="https://mtg.design" target="_blank" rel="noreferrer">MTG.Design</a>.
         </p>
         <p>
           Made with ❤️ by <a href="https://elliottgrov.es" target="_blank">Elliott Groves Design</a>
@@ -101,7 +105,6 @@ function Home() {
 function About() {
   return (
     <section>
-      <p>Card images are from <a href="https://scryfall.com" target="_blank">Scryfall</a>.</p>
     </section>
   );
 }

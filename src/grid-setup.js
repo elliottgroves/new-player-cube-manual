@@ -8,7 +8,7 @@ export default function GridSetupPage() {
         pageTitle='2 or 3 player setup ("Grid Draft")'
         previousLinkPath="/build"
         previousTitle="Back"
-        nextLinkPath="/"
+        nextLinkPath="/finish-build"
         nextTitle="Next"
       />
       
@@ -51,7 +51,7 @@ Once you’ve gone through all 18 packs, you’re ready to turn the cards in fro
         <button className="large-nav-button">Finish your deck</button>
       </Link>
 
-      <p>[Thank you to <a href="https://luckypaper.co/resources/formats/grid-draft/" target="_blank">LuckyPaper</a> for their explainer article and Jason Waddell who designed this type of draft!]</p>
+      <p>[Thank you to <a href="https://luckypaper.co/resources/formats/grid-draft/" target="_blank" rel="noreferrer">LuckyPaper</a> for their explainer article and Jason Waddell who designed this type of draft!]</p>
     </section>
   );
 }
