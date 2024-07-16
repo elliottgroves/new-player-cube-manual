@@ -6,22 +6,22 @@
   gap: 0.5rem;
 }
 
-.mana-cost {
+.cast-spell-animation .mana-cost {
   position: relative;
   height: 110px;
 }
-.mana-cost .mana {
+.cast-spell-animation .mana-cost .mana {
   height: auto;
   width: 25%;
   will-change: filter;
   position: absolute;
 }
-.mana-cost .mana.one {
-  right: 32%;
+.cast-spell-animation .mana-cost .mana.one {
+  right: 35%;
   animation: paidTwo 6s ease infinite;
 }
-.mana-cost .mana.two {
-  right: 2%;
+.cast-spell-animation .mana-cost .mana.two {
+  right: 2.5%;
   animation: paidGreen 6s ease infinite;
 }
 @keyframes paidTwo {
@@ -34,7 +34,7 @@
   65% {
     filter: drop-shadow(0 0 10px green);
   }
-  80% {
+  85% {
     filter: drop-shadow(0 0 10px green);
   }
   100% {
@@ -51,7 +51,7 @@
   38% {
     filter: drop-shadow(0 0 10px green);
   }
-  80% {
+  85% {
     filter: drop-shadow(0 0 10px green);
   }
   100% {
@@ -59,11 +59,11 @@
   }
 }
 
-.mana-pool {
+.cast-spell-animation .mana-pool {
   position: relative;
   height: 90px;
 }
-.mana-pool .mana {
+.cast-spell-animation .mana-pool .mana {
   animation: addMana 6s ease infinite;
   will-change: transform, opacity;
   opacity: 0;
@@ -71,15 +71,15 @@
   height: auto;
   width: 20%;
 }
-.mana-pool .mana.one {
+.cast-spell-animation .mana-pool .mana.one {
   left: 10%;
   animation-delay: 3.6s;
 }
-.mana-pool .mana.two {
+.cast-spell-animation .mana-pool .mana.two {
   left: 42.5%;
   animation-delay: 2.8s;
 }
-.mana-pool .mana.three {
+.cast-spell-animation .mana-pool .mana.three {
   left: 75%;
   animation-delay: 2s;
 }
@@ -103,11 +103,11 @@
   }
 }
 
-.lands {
+.cast-spell-animation .lands {
   position: relative;
   height: 240px;
 }
-.land {
+.cast-spell-animation .land {
   position: absolute;
   height: auto;
   width: 40%;
@@ -116,15 +116,15 @@
   animation: rotateLand 6s ease infinite;
   will-change: transform;
 }
-.land.one {
+.cast-spell-animation .land.one {
   left: 10%;
   animation-delay: 3.6s;
 }
-.land.two {
+.cast-spell-animation .land.two {
   left: 30%;
   animation-delay: 2.8s;
 }
-.land.three {
+.cast-spell-animation .land.three {
   left: 50%;
   animation-delay: 2s;
 }

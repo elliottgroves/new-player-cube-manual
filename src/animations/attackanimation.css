@@ -1,0 +1,85 @@
+.attack-animation {
+  padding-top: 50px;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+.attack-animation .creatures {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: relative;
+}
+
+.attack-animation .bear {
+  width: 40%;
+  height: auto;
+  animation: attack 4s ease infinite;
+  border-radius: 4%;
+}
+
+.attack-animation .centaur {
+  width: 40%;
+  position: relative;
+}
+
+.attack-animation .centaur img {
+  width: 100%;
+  height: auto;
+  border-radius: 4%;
+  filter: grayscale(1);
+}
+
+.attack-animation .centaur::after {
+  content: "😴";
+  font-size: 5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.attack-animation .lands {
+  position: relative;
+  height: 180px;
+}
+.attack-animation .land {
+  position: absolute;
+  height: auto;
+  width: 40%;
+  max-width: 300px;
+  border-radius: 4%;
+  transform: rotate(90deg);
+}
+.attack-animation .land.one {
+  left: 10%;
+}
+.attack-animation .land.two {
+  left: 30%;
+}
+.attack-animation .land.three {
+  left: 50%;
+}
+
+@keyframes attack {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  20% {
+    transform: translateY(0) rotate(90deg);
+  }
+  40% {
+    transform: translateY(-100px) rotate(90deg);
+  }
+  80% {
+    transform: translateY(-100px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}

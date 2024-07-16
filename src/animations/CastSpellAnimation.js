@@ -7,21 +7,21 @@ import './castspellanimation.css';
 
 export default function CastSpellAnimation() {
   return (
-    <div className="cast-spell-animation">
+    <figure className="cast-spell-animation">
       <div className="mana-cost">
-        <img className="mana one" src={TwoMana} />
-        <img className="mana two" src={GreenMana} />
+        <img className="mana one" src={TwoMana} alt="{2}"/>
+        <img className="mana two" src={GreenMana} alt="{G}"/>
       </div>
       <div className="mana-pool">
-        <img className="mana one" src={RedMana} />
-        <img className="mana two" src={GreenMana} />
-        <img className="mana three" src={GreenMana} />
+        <img className="mana one" src={RedMana} alt="{R}"/>
+        <img className="mana two" src={GreenMana} alt="{G}"/>
+        <img className="mana three" src={GreenMana} alt="{G}"/>
       </div>
       <div className="lands">
-        <img className="land one" src={Mountain} />
-        <img className="land two" src={Forest} />
-        <img className="land three" src={Forest} />
+        <img className="land one" src={Mountain} alt="Mountain"/>
+        <img className="land two" src={Forest} alt="Forest"/>
+        <img className="land three" src={Forest} alt="Forest"/>
       </div>
-    </div>
+    </figure>
   );
 }
