@@ -1,5 +1,23 @@
+p img {
+  display: inline;
+  height: 22px;
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+
+.centaur-courser {
+  width: 100%;
+  aspect-ratio: 6.5/1;
+  object-fit: cover;
+  object-position: 0% 0%;
+  border-radius: 18px 18px 0 0;
+  max-width: 400px;
+  display: block;
+  margin: auto;
+}
+
 .main-phase-section {
-  background: lightblue;
+  background: linear-gradient(lightblue, transparent 400px);
 }
 
 .combat-section {

@@ -4,17 +4,6 @@
   display: flex;
   flex-flow: column;
   gap: 0.5rem;
-  background: linear-gradient(grey, transparent 45%);
-  border-radius: 14px;
-}
-
-.centaur-courser {
-  width: 100%;
-  aspect-ratio: 6.25/1;
-  object-fit: cover;
-  object-position: 0% 0%;
-  border-radius: 16px 16px 0 0;
-  align-self: center;
 }
 
 .mana-cost {
@@ -24,32 +13,49 @@
 .mana-cost .mana {
   height: auto;
   width: 25%;
-  will-change: opacity;
+  will-change: filter;
   position: absolute;
-  animation-delay: 5s;
-  filter: drop-shadow(0 0 5px orange);
 }
 .mana-cost .mana.one {
   right: 32%;
+  animation: paidTwo 6s ease infinite;
 }
 .mana-cost .mana.two {
   right: 2%;
+  animation: paidGreen 6s ease infinite;
 }
-@keyframes manaCost {
+@keyframes paidTwo {
   0% {
-    opacity: 0;
+    filter: none;
   }
-  10% {
-    opacity: 1;
+  60% {
+    filter: none;
   }
-  50% {
-    opacity: 1;
+  65% {
+    filter: drop-shadow(0 0 10px green);
   }
-  70% {
-    opacity: 0;
+  80% {
+    filter: drop-shadow(0 0 10px green);
   }
   100% {
-    opacity: 0;
+    filter: none;
+  }
+}
+@keyframes paidGreen {
+  0% {
+    filter: none;
+  }
+  33% {
+    filter: none;
+  }
+  38% {
+    filter: drop-shadow(0 0 10px green);
+  }
+  80% {
+    filter: drop-shadow(0 0 10px green);
+  }
+  100% {
+    filter: none;
   }
 }
 

@@ -2,6 +2,9 @@ import './tutorial.css';
 import RelativeNavHeader from './relative-nav.js';
 import { Link } from 'react-router-dom';
 import CastSpellAnimation from './animations/CastSpellAnimation.js';
+import two from './icons/2.svg';
+import g from './icons/g.svg';
+import CentaurCourser from './images/Centaur Courser.webp';
 
 export default function TutorialPage() {
   return (
@@ -58,11 +61,12 @@ Each turn, you can play one land, spend mana from your lands to pay for spells, 
       <h3>Main Phase</h3>
       <p>Each turn, you get to play one land card from your hand.</p>
     <p>Then, you can <b>add mana</b> from your <b>lands</b> to pay for the <b>mana cost</b> of any cards you want. You do that by <b>tapping</b> the lands you want to add mana from - turn them sideways to show that you’ve used them. Here’s an example:</p>
+      <img className="centaur-courser" src={CentaurCourser} />
+      <p>Centaur Courser is a creature with a mana cost of <img src={two} alt="{2}"/><img src={g} alt="{G}"/>. This means you have to spend <b>one green mana</b> and <b>two mana of <i>any color</i></b> to pay for Centaur Courser.</p>
 
       <CastSpellAnimation />
 
-      <p>Centaur Courser is a creature that has a mana cost of 2G. This means you can use one green mana and two mana of any color to pay for Centaur Courser. Each land adds one mana per turn - even though you tapped it this turn, each turn starts by untapping all your cards.</p>
-
+      <p>Each land adds one mana per turn - even though you tapped it this turn, each turn starts by untapping all your cards.</p>
 <p>That’s it for the main phases! You can play one land card per turn during either main phase, and then tap lands to play spells during your main phase.</p>
     </section>
     <section className="combat-section">

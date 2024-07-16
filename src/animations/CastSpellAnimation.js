@@ -1,4 +1,3 @@
-import CentaurCourser from '../images/Centaur Courser.webp';
 import Forest from '../images/Forest.webp';
 import Mountain from '../images/Mountain.webp';
 import GreenMana from '../icons/g.svg';
@@ -9,7 +8,6 @@ import './castspellanimation.css';
 export default function CastSpellAnimation() {
   return (
     <div className="cast-spell-animation">
-      <img className="centaur-courser" src={CentaurCourser} />
       <div className="mana-cost">
         <img className="mana one" src={TwoMana} />
         <img className="mana two" src={GreenMana} />
