@@ -18,45 +18,9 @@
 }
 .cast-spell-animation .mana-cost .mana.one {
   right: 35%;
-  animation: paidTwo 6s ease infinite;
 }
 .cast-spell-animation .mana-cost .mana.two {
   right: 2.5%;
-  animation: paidGreen 6s ease infinite;
-}
-@keyframes paidTwo {
-  0% {
-    filter: none;
-  }
-  60% {
-    filter: none;
-  }
-  65% {
-    filter: drop-shadow(0 0 10px green);
-  }
-  85% {
-    filter: drop-shadow(0 0 10px green);
-  }
-  100% {
-    filter: none;
-  }
-}
-@keyframes paidGreen {
-  0% {
-    filter: none;
-  }
-  33% {
-    filter: none;
-  }
-  38% {
-    filter: drop-shadow(0 0 10px green);
-  }
-  85% {
-    filter: drop-shadow(0 0 10px green);
-  }
-  100% {
-    filter: none;
-  }
 }
 
 .cast-spell-animation .mana-pool {
@@ -64,7 +28,6 @@
   height: 90px;
 }
 .cast-spell-animation .mana-pool .mana {
-  animation: addMana 6s ease infinite;
   will-change: transform, opacity;
   opacity: 0;
   position: absolute;
@@ -73,34 +36,12 @@
 }
 .cast-spell-animation .mana-pool .mana.one {
   left: 10%;
-  animation-delay: 3.6s;
 }
 .cast-spell-animation .mana-pool .mana.two {
   left: 42.5%;
-  animation-delay: 2.8s;
 }
 .cast-spell-animation .mana-pool .mana.three {
   left: 75%;
-  animation-delay: 2s;
-}
-@keyframes addMana {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  10% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 .cast-spell-animation .lands {
@@ -113,54 +54,29 @@
   width: 40%;
   max-width: 300px;
   border-radius: 4%;
-  animation: rotateLand 6s ease infinite;
   will-change: transform;
 }
 .cast-spell-animation .land.one {
   left: 10%;
-  animation-delay: 3.6s;
 }
 .cast-spell-animation .land.two {
   left: 30%;
-  animation-delay: 2.8s;
 }
 .cast-spell-animation .land.three {
   left: 50%;
-  animation-delay: 2s;
-}
-@keyframes rotateLand {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(90deg);
-  }
-  70% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 @media (prefers-reduced-motion) {
   .cast-spell-animation .mana-cost .mana.one {
-    animation: none;
     filter: drop-shadow(0 0 10px green);
   }
   .cast-spell-animation .mana-cost .mana.two {
-    animation: none;
     filter: drop-shadow(0 0 10px green);
   }
   .cast-spell-animation .mana-pool .mana {
-    animation: none;
     opacity: 1;
     transform: translateY(0);
   }
   .cast-spell-animation .land {
-    animation: none;
     transform: rotate(80deg);
   }
 }
