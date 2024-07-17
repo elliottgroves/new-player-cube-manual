@@ -14,7 +14,6 @@
 .attack-animation .bear {
   width: 40%;
   height: auto;
-  animation: attack 4s ease infinite;
   border-radius: 4%;
 }
 
