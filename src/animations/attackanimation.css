@@ -1,5 +1,5 @@
 .attack-animation {
-  padding-top: 50px;
+  padding-top: 30px;
   max-width: 400px;
   width: 100%;
   margin: auto;
@@ -46,7 +46,7 @@
 
 .attack-animation .lands {
   position: relative;
-  height: 180px;
+  height: 11rem;
 }
 .attack-animation .land {
   position: absolute;
@@ -66,6 +66,19 @@
   left: 50%;
 }
 
+@media only screen and (min-width: 768px) {
+  .attack-animation .lands {
+    height: 200px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .attack-animation .bear {
+    animation: none;
+    transform: translateY(-75px) rotate(90deg);
+  }
+}
+
 @keyframes attack {
   0% {
     transform: translateY(0) rotate(0);
@@ -74,10 +87,10 @@
     transform: translateY(0) rotate(90deg);
   }
   40% {
-    transform: translateY(-100px) rotate(90deg);
+    transform: translateY(-75px) rotate(90deg);
   }
   80% {
-    transform: translateY(-100px) rotate(90deg);
+    transform: translateY(-75px) rotate(90deg);
   }
   100% {
     transform: translateY(0) rotate(0);

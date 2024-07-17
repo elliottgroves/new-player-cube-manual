@@ -3,6 +3,9 @@ import RelativeNavHeader from './relative-nav.js';
 import { Link } from 'react-router-dom';
 import CastSpellAnimation from './animations/CastSpellAnimation.js';
 import AttackAnimation from './animations/AttackAnimation.js';
+import BlockAnimation from './animations/BlockAnimation.js';
+import OrderBlockersAnimation from './animations/OrderBlockersAnimation.js';
+import DamageAnimation from './animations/DamageAnimation.js';
 import two from './icons/2.svg';
 import g from './icons/g.svg';
 import CentaurCourser from './images/Centaur Courser.webp';
@@ -72,7 +75,7 @@ Each turn, you can play one land, spend mana from your lands to pay for spells, 
     </section>
     <section className="combat-section">
     <h3>Combat</h3>
-      <ul>TL;DR:
+      <ul>Key points:
         <li>Attack your opponent by tapping creatures you've controlled since last turn</li>
         <li>Your opponent can block with their untapped creatures. Multiple creatures can block one attacker.</li>
         <li>Unblocked creatures deal their power's worth of damage to your opponent</li>
@@ -81,27 +84,26 @@ Each turn, you can play one land, spend mana from your lands to pay for spells, 
       </ul>
       
       <button>Tell me more</button>
-    <p>Now for how to win the game - combat. To sum it up, you can use your creatures to attack your opponent, and they can use their creatures to block your attacks.
+    <p>Now for how to win the game - combat. To sum it up, you can use your creatures to attack your opponent, and they can use their creatures to block your attacks.</p>
+    <p>Go to combat any time during your first main phase by saying so ("go to combat"). You can then pick any of your <b>untapped</b> creatures to declare as attackers, as long as you played them before this turn, since <b>creatures can’t attack the turn they’re played</b>.</p>
 
-Start combat any time during your first main phase by saying so (“go to combat”, “declare attacks”, “hi-yah”, anything works as long as your opponent gets it). You can then pick any of your untapped creatures to declare as attackers, as long as you played them before this turn, since creatures can’t attack the turn they’re played.
-
-You show which creatures are attacking your opponent by tapping them, just like a land you’re using for mana - turn em sideways!</p>
+<p>You show which creatures are attacking your opponent by <b>tapping</b> them, just like a land you’re using for mana - turn em sideways!</p>
 
       <AttackAnimation />
 
-      <p>After you’ve declared all your attackers, your opponent gets a chance to block your attack with their untapped creatures. Blocked creatures deal no damage to your opponent.</p>
+      <p>After you’ve declared all your attackers, your opponent gets a chance to block your attackers with their untapped creatures. Blocked creatures deal no damage to your opponent, but damage the blocking creature(s) instead.</p>
+      
+      <BlockAnimation />
 
-      <p>Above, your opponent can choose to block with either or both of their untapped creatures, but not their tapped creature.</p>
-
-      <p>Once blocks are declared, damage is dealt. Both creatures deal damage equal to their power (first number in the bottom right box) to the other creature’s toughness (second number in the bottom right). Unblocked creatures damage your opponent!</p>
+      <p>Once blocks are declared, damage is dealt. If multiple creatures are blocking one attacking creature, the attacker decides in what order their creature deals damage to the blockers.</p>
+      
+      <OrderBlockersAnimation />
+      
+    <p>All the creatures deal damage equal to their power (first number in the bottom right box) to the other creatures' toughness (second number in the bottom right). Unblocked creatures damage your opponent!</p>
+      
+      <DamageAnimation />
       
       <p>If a creature takes as much damage as its toughness in a turn, it has taken lethal damage - it dies and is put into the graveyard. At the end of the turn, damage wears off of creatures that are still around (it doesn't persist between turns).</p>
-
-      <p>Lastly, multiple creatures are able to block a single attacking creature. Once the blocks are declared the attacker decides which creatures take damage first. For example:</p>
-
-      <p>Your opponent is attacking you with a 4/4 (4 power, 4 toughness). You have two untapped creatures - a 2/2 and a 3/3. You can block the 4/4 with both of your creatures, then the attacking player orders the blockers in the order they'd like to damage them.</p>
-
-      <p>If they order your 3/3 first, it'll take 3 damage which is enough to kill it, and the 4/4 still has 1 damage to deal. It deals 1 damage to the 2/2, leaving it alive.</p>
     </section>
     <section className="instant-cards-section">
       <h3>Instant Cards</h3>

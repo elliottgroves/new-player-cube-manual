@@ -145,3 +145,22 @@
     transform: rotate(0deg);
   }
 }
+@media (prefers-reduced-motion) {
+  .cast-spell-animation .mana-cost .mana.one {
+    animation: none;
+    filter: drop-shadow(0 0 10px green);
+  }
+  .cast-spell-animation .mana-cost .mana.two {
+    animation: none;
+    filter: drop-shadow(0 0 10px green);
+  }
+  .cast-spell-animation .mana-pool .mana {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .cast-spell-animation .land {
+    animation: none;
+    transform: rotate(80deg);
+  }
+}

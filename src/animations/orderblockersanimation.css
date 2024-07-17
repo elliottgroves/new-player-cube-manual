@@ -1,0 +1,64 @@
+.order-blockers-animation {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+.order-blockers-animation .opponent-creatures, .order-blockers-animation .your-creatures {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.order-blockers-animation .opponent-creatures img, .order-blockers-animation .your-creatures img {
+  width: 28%;
+  border-radius: 4%;
+}
+.order-blockers-animation .your-creatures img {
+  transform: rotate(90deg);
+}
+.order-blockers-animation .opponent-creatures img {
+  transform: rotate(180deg);
+}
+
+.order-blockers-animation .opponent-creatures .duo {
+  z-index: 3;
+  animation: order-duo-move 3s ease infinite;
+}
+.order-blockers-animation .opponent-creatures .sprite {
+  z-index: 2;
+  animation: order-sprite-move 3s ease infinite;
+}
+
+@keyframes order-duo-move {
+  0% {
+    transform: rotate(180deg) translate(-40px, 0px);
+  }
+  30% {
+    transform: rotate(180deg) translate(-80px, -50px);
+  }
+  50% {
+    transform: rotate(180deg) translate(-80px, -50px);
+  }
+  80% {
+    transform: rotate(180deg) translate(-40px, 0px);
+  }
+  100% {
+    transform: rotate(180deg) translate(-40px, 0px);
+  }
+}
+@keyframes order-sprite-move {
+  0% {
+    transform: rotate(180deg) translate(40px, -50px);
+  }
+  30% {
+    transform: rotate(180deg) translate(80px, 0px);
+  }
+  50% {
+    transform: rotate(180deg) translate(80px, 0px);
+  }
+  80% {
+    transform: rotate(180deg) translate(40px, -50px);
+  }
+  100% {
+    transform: rotate(180deg) translate(40px, -50px);
+  }
+}
