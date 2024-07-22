@@ -1,5 +1,14 @@
+:root {
+  --bg-color: #FCF5E5;
+  --primary-color: maroon;
+  --confirm-color: #63C132;
+  --button-color: orange;
+  --link-color: #5CCAFF;
+  --visited-link-color: #1D8CCE;
+}
+
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -8,7 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   margin: 0;
-  background-color: #FCF5E5;
+  background-color: var(--bg-color);
   min-height: 100svh;
   color: #121248;
 }
@@ -25,8 +34,8 @@ a:has(button) {
 }
 
 button {
-  background: orange;
-  color: #FCF5E5;
+  background: var(--button-color);
+  color: var(--bg-color);
   border: none;
   outline: none;
   padding: 0.5rem 1.5rem;

@@ -1,5 +1,6 @@
 import './tutorial.css';
 import RelativeNavHeader from './relative-nav.js';
+import Scroll from './Scroll.js';
 import { Link } from 'react-router-dom';
 import CastSpellAnimation from './animations/CastSpellAnimation.js';
 import AttackAnimation from './animations/AttackAnimation.js';
@@ -39,9 +40,9 @@ export default function TutorialPage() {
 You need a good mix of lands and spells to play - if you have 1 or less lands or 6 or more lands, you should take a mulligan.
       </p>
 
-      <div className="tips-section">
-        <button>Tell me how to mulligan</button>
-      </div>
+      <Scroll title={'Tell me how to mulligan'}>
+        <p>Take some cards and put em on bottom</p>
+      </Scroll>
 
       <p>Once both players are happy with their hands, let’s begin!
 

@@ -18,20 +18,24 @@ export default function CastSpellAnimation() {
 
       function fullAnimation() {
         const castSpell = timeline([
-          ['.cast-spell-animation .mana-cost .mana.two', { filter: 'drop-shadow(0 0 10px green)' }, { duration: 0.1, easing: 'linear' }],
-          ['.cast-spell-animation .land.three', { transform: 'rotate(90deg)' }, { at: '<' }],
-          ['.cast-spell-animation .mana-pool .mana.three', { opacity: 1 }, { at: '<' }],
-          ['.cast-spell-animation .land.two', { transform: 'rotate(90deg)' }],
-          ['.cast-spell-animation .mana-pool .mana.two', { opacity: 1 }, { at: '<' }],
-          ['.cast-spell-animation .mana-cost .mana.one', { filter: 'drop-shadow(0 0 10px green)' }, { duration: 0.1, easing: 'linear' }],
-          ['.cast-spell-animation .land.one', { transform: 'rotate(90deg)' }, { at: '<' }],
-          ['.cast-spell-animation .mana-pool .mana.one', { opacity: 1 }, { at: '<' }],
-          ['.cast-spell-animation .mana-cost .mana', { filter: 'none' }, { at: 1 }],
-          ['.cast-spell-animation .mana-pool .mana', { opacity: 0 }, { at: '<' }],
-          ['.cast-spell-animation .lands .land', { transform: 'rotate(0)' }, { at: '<' }]
+          'first',
+          ['.cast-spell-animation .mana-cost .mana.two', { filter: 'drop-shadow(0 0 10px green)' }, { delay: 0.01, duration: 0.1, at: 'first' }],
+          ['.cast-spell-animation .land.three', { transform: 'rotate(90deg)' }, { at: 'first' }],
+          ['.cast-spell-animation .mana-pool .mana.three', { opacity: 1, duration: 0.1 }, { at: 'first' }],
+          'second',
+          ['.cast-spell-animation .land.two', { transform: 'rotate(90deg)' }, { at: 'second' }],
+          ['.cast-spell-animation .mana-pool .mana.two', { opacity: 1 }, { at: 'second' }],
+          'third',
+          ['.cast-spell-animation .mana-cost .mana.one', { filter: 'drop-shadow(0 0 10px green)' }, { delay: 0.01, duration: 0.1, at: 'third' }],
+          ['.cast-spell-animation .land.one', { transform: 'rotate(90deg)' }, { at: 'third' }],
+          ['.cast-spell-animation .mana-pool .mana.one', { opacity: 1 }, { at: 'third' }],
+          { name: 'reset', at: 1.2 },
+          ['.cast-spell-animation .mana-cost .mana', { filter: 'none' }, { at: 'reset' }],
+          ['.cast-spell-animation .mana-pool .mana', { opacity: 0 }, { at: 'reset' }],
+          ['.cast-spell-animation .lands .land', { transform: 'rotate(0)' }, { at: 'reset' }]
         ], {
           duration: 5,
-          easing: ['ease'],
+          defaultOptions: { ease: 'ease-in-out' },
           repeat: Infinity
         });
 

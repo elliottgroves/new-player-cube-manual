@@ -9,6 +9,7 @@ import Tutorial from './tutorial.js';
 import Instants from './instants.js';
 import CheatSheet from './cheat-sheet.js';
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import { animate, stagger } from 'motion';
 
 export default function App() {
   return (
@@ -35,19 +36,21 @@ function Layout() {
   return (
     <div className="main-layout">
       <nav className="main-nav">
-        <Link to="/" className="home-logo-link">
-          <img src={logo} className="logo" />
-          <h1>Welcome Cube</h1>
-        </Link>
-
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
+        <div className="main-nav-content">
+          <Link to="/" className="home-logo-link">
+            <img src={logo} className="logo" />
+            <h1>Welcome Cube</h1>
+          </Link>
+  
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <main className="main-content">
@@ -72,33 +75,32 @@ function Layout() {
 
 function Home() {
   return (
-    <section className="home-nav-buttons">
-      <h2>First time?</h2>
-
-      <Link to="/welcome">
-        <button className="large-nav-button">
-          <h2>Welcome to Magic!</h2>
-        </button>
-      </Link>
-
-      <h2>Ready to play?</h2>
-
-      <Link to="/build">
-        <button className="large-nav-button">
-          <span>Build your deck</span>
-        </button>
-      </Link>
-      <Link to="/tutorial">
-        <button className="large-nav-button">
-          <span>How to play</span>
-        </button>
-      </Link>
-      <Link to="/cheat-sheet">
-        <button className="large-nav-button">
-          <span>Turn cheat sheet</span>
-        </button>
-      </Link>
-    </section>
+    <div class="home-layout">
+      <section className="hero">
+        <Link to="/welcome">
+          <button className="large-nav-button">
+            <span>Get Started</span>
+          </button>
+        </Link>
+      </section>
+      <section className="home-nav-buttons">
+        <Link to="/build">
+          <button className="large-nav-button">
+            <span>Build your deck</span>
+          </button>
+        </Link>
+        <Link to="/tutorial">
+          <button className="large-nav-button">
+            <span>How to play</span>
+          </button>
+        </Link>
+        <Link to="/cheat-sheet">
+          <button className="large-nav-button">
+            <span>Turn cheat sheet</span>
+          </button>
+        </Link>
+      </section>
+    </div>
   );
 }
 

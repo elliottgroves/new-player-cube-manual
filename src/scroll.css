@@ -1,0 +1,36 @@
+.scroll {
+  width: 100%;
+  background: linear-gradient(#FADB6F, #FADB6F 1rem);
+  position: relative;
+  padding-bottom: 40px;
+  color: maroon;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: auto 0fr;
+  transition: grid-template-rows 0.5s ease;
+}
+
+.scroll.open {
+  grid-template-rows: auto 1fr;
+}
+
+.scroll::after {
+  box-shadow: 0 0px 8px 2px #4443;
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  bottom: 0px;
+  background: linear-gradient(#4443, transparent 40%, transparent 60%, #4443);
+}
+
+.scroll .content {
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.scroll .title {
+  padding: 0.5rem 1rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
