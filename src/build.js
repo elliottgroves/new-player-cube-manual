@@ -1,8 +1,10 @@
 import RelativeNavHeader from './relative-nav.js';
+import AnimatedLayout from './animatedlayout.js';
 import { Link } from 'react-router-dom';
 
 export default function BuildPage() {
   return (
+    <AnimatedLayout>
     <section>
       <RelativeNavHeader
         pageTitle="Build your deck!"
@@ -83,5 +85,6 @@ export default function BuildPage() {
         <button className="large-nav-button">4 or more player draft setup</button>
       </Link>
     </section>
+    </AnimatedLayout>
   );
 }

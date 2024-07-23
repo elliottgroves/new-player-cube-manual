@@ -2,9 +2,12 @@ import './welcome.css';
 import RelativeNavHeader from './relative-nav.js';
 import Book from './book.js';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import AnimatedLayout from './animatedlayout.js';
 
 export default function WelcomePage() {
   return (
+    <AnimatedLayout>
     <section>
       <RelativeNavHeader
         pageTitle="Welcome!"
@@ -25,12 +28,6 @@ export default function WelcomePage() {
         <button className="large-nav-button">Build my deck</button>
       </Link>
     </section>
+    </AnimatedLayout>
   );
 }
-
-//      <div className="welcome-card-group">
-//        <img className="card card-one" src="https://api.scryfall.com/cards/named?exact=Bayou&amp;format=image&amp;version=normal" width="215" height="300" />
-//        <img className="card card-two" src="https://api.scryfall.com/cards/named?exact=Alpine+Watchdog&amp;format=image&amp;version=normal" width="215" height="300" />
-//        <img className="card card-three" src="https://api.scryfall.com/cards/named?exact=Slick+Sequence&set_uri=m20&amp;format=image&amp;version=normal" width="215" height="300" />
-//      </div>
-//

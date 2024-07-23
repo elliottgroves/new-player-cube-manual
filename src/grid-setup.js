@@ -1,8 +1,10 @@
 import RelativeNavHeader from './relative-nav.js';
+import AnimatedLayout from './animatedlayout.js';
 import { Link } from 'react-router-dom';
 
 export default function GridSetupPage() {
   return (
+    <AnimatedLayout>
     <section>
       <RelativeNavHeader
         pageTitle='2 or 3 player setup ("Grid Draft")'
@@ -53,5 +55,6 @@ Once you’ve gone through all 18 packs, you’re ready to turn the cards in fro
 
       <p>[Thank you to <a href="https://luckypaper.co/resources/formats/grid-draft/" target="_blank" rel="noreferrer">LuckyPaper</a> for their explainer article and Jason Waddell who designed this type of draft!]</p>
     </section>
+    </AnimatedLayout>
   );
 }

@@ -8,8 +8,11 @@ import FinishBuild from './finish-build.js';
 import Tutorial from './tutorial.js';
 import Instants from './instants.js';
 import CheatSheet from './cheat-sheet.js';
-import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import { Routes, Route, Outlet, Link, useOutlet, useLocation } from 'react-router-dom';
 import { animate, stagger } from 'motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { cloneElement } from 'react';
+import AnimatedLayout from './animatedlayout.js';
 
 export default function App() {
   return (
@@ -33,6 +36,9 @@ export default function App() {
 }
 
 function Layout() {
+  const location = useLocation();
+  const element = useOutlet();
+
   return (
     <div className="main-layout">
       <nav className="main-nav">
@@ -54,7 +60,9 @@ function Layout() {
       </nav>
 
       <main className="main-content">
-        <Outlet />
+        <AnimatePresence mode="wait" initial={true}>
+          { element && cloneElement(element, { key: location.pathname })}
+        </AnimatePresence>
       </main>
 
       <footer className="main-footer">
@@ -75,6 +83,7 @@ function Layout() {
 
 function Home() {
   return (
+    <AnimatedLayout>
     <div class="home-layout">
       <section className="hero">
         <Link to="/welcome">
@@ -101,6 +110,7 @@ function Home() {
         </Link>
       </section>
     </div>
+    </AnimatedLayout>
   );
 }
 

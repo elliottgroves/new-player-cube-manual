@@ -1,8 +1,10 @@
 import RelativeNavHeader from './relative-nav.js';
+import AnimatedLayout from './animatedlayout.js';
 import { Link } from 'react-router-dom';
 
 export default function DraftSetupPage() {
   return (
+    <AnimatedLayout>
     <section>
       <RelativeNavHeader
         pageTitle="4 or more player setup"
@@ -28,5 +30,6 @@ Once you’re all done choosing cards you’re ready to turn the cards in front 
         <button className="large-nav-button">Finish your deck</button>
       </Link>
     </section>
+    </AnimatedLayout>
   );
 }

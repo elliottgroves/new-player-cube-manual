@@ -23,7 +23,6 @@ export default function Book() {
       <BookPage />
       <div className="page-bg">
         <h3>Land Cards</h3>
-        <img className="card" src="https://api.scryfall.com/cards/named?exact=Meandering+River&amp;format=image&amp;version=normal" />
       </div>
     </div>
   );

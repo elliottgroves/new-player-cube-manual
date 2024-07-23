@@ -1,8 +1,10 @@
 import RelativeNavHeader from './relative-nav.js';
+import AnimatedLayout from './animatedlayout.js';
 import { Link } from 'react-router-dom';
 
 export default function BuildPage() {
   return (
+    <AnimatedLayout>
     <section>
       <RelativeNavHeader
         pageTitle="Finish your deck"
@@ -39,5 +41,6 @@ If you have an odd number of people, feel free to play a 3-player game or take t
         <button className="large-nav-button">How to play</button>
       </Link>
     </section>
+    </AnimatedLayout>
   );
 }

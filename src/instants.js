@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import AnimatedLayout from './animatedlayout.js';
 
 export default function CheatSheetPage() {
   return (
+    <AnimatedLayout>
     <section>
       <h2>Nerdy Instants Rules</h2>
       <p>So! You want to know everything about instants.
@@ -51,5 +53,6 @@ Let's say your opponent says they want to Shock your Grizzly Bears. Before that 
         <button className="large-nav-button">Skip to turn cheat sheet</button>
       </Link>
     </section>
+    </AnimatedLayout>
   );
 }

@@ -10,9 +10,11 @@ import DamageAnimation from './animations/DamageAnimation.js';
 import two from './icons/2.svg';
 import g from './icons/g.svg';
 import CentaurCourser from './images/Centaur Courser.webp';
+import AnimatedLayout from './animatedlayout.js';
 
 export default function TutorialPage() {
   return (
+    <AnimatedLayout>
     <article>
     <section>
       <RelativeNavHeader
@@ -139,5 +141,6 @@ Each turn, you can play one land, spend mana from your lands to pay for spells, 
       </Link>
     </section>
     </article>
+    </AnimatedLayout>
   );
 }
