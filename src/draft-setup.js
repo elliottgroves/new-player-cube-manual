@@ -12,6 +12,7 @@ export default function DraftSetupPage() {
         previousTitle="Back"
         nextLinkPath="/"
         nextTitle="Next"
+        artCardScryfallId="880047fd-d258-40fb-bcd5-37cb26678dfe"
       />
       
       <p>With four or more players, you can draft decks by passing around packs of cards. Start by taking the big stack of cards out of the box and shuffling all of them together. This makes sure everyone’s packs are nice and random.

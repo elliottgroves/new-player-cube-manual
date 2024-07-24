@@ -7,11 +7,13 @@ export default function BuildPage() {
     <AnimatedLayout>
     <section>
       <RelativeNavHeader
-        pageTitle="Build your deck!"
+        pageTitle="Build Your Deck"
         previousLinkPath="/welcome"
         previousTitle="Back"
         nextLinkPath="/grid-setup"
         nextTitle="Next"
+        titleEmoji="🔨"
+        artCardScryfallId="31782426-4128-47af-8922-0207a3233885"
       />
   
       <p>You’re about to play one of the most time-honored types of <i>Magic: the Gathering</i>: <b>draft</b>. You all are about to make decks on the fly using the cards in front of you.
@@ -57,21 +59,21 @@ export default function BuildPage() {
   
       <p>You can tell what <b>color(s)</b> a card is based on its <b>mana cost</b> in the top right.</p>
       
-      <figure>
+      <figure className="card-figure">
         <img src="https://api.scryfall.com/cards/named?exact=Centaur+Courser&amp;format=image&amp;version=normal" width="215" height="300" />
         <figcaption>Centaur Courser needs green mana to cast, so it's a green card.</figcaption>
       </figure>
   
       <p>They also have colored backgrounds that match what color they are, except for <b>two-colored</b> cards which have a gold background.</p>
       
-      <figure>
+      <figure className="card-figure">
         <img src="https://api.scryfall.com/cards/named?exact=Empyrean+Eagle&amp;format=image&amp;version=normal" width="215" height="300" />
         <figcaption>Empyrean Eagle needs white and blue mana to cast, so it's a white and blue card.</figcaption>
       </figure>
   
       <p><b>Lands</b> don’t have a <b>mana cost</b>, so you should look at what <b>colors</b> of <b>mana</b> they add. <b>Lands</b> that add both of your <b>colors</b> help your deck function smoothly.</p>
   
-      <figure>
+      <figure className="card-figure">
         <img src="https://api.scryfall.com/cards/named?exact=Molten+Tributary&amp;format=image&amp;version=normal" width="215" height="300" />
         <figcaption>Molten Tributary adds blue or red mana, so it's perfect for a deck playing both blue cards and red cards.</figcaption>
       </figure>

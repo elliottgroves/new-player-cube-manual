@@ -66,18 +66,7 @@
 .main-content {
   max-width: 768px;
   margin: 0 auto;
-}
-
-.relative-nav-header {
-  max-width: 100%;
-  border-bottom: 1px solid #ccc;
-}
-
-.relative-nav-header ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
+  padding: 0 1rem;
 }
 
 .home-layout {
@@ -103,18 +92,45 @@
   margin-bottom: 1rem;
 }
 
+.card-figure {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 max(20%, 1rem) 2rem max(20%, 1rem);
+}
+.card-figure img {
+  display: block;
+}
+.card-figure figcaption {
+  color: #555;
+}
+
 .main-footer {
   flex-grow: 1;
   margin-top: 5rem;
-  padding: 8rem 1rem 4rem 1rem;
+  padding: 2rem 1rem 6rem 1rem;
   background-color: var(--primary-color);
   color: white;
   font-size: 0.9rem;
 }
 
-.main-footer p {
+.main-footer * {
   max-width: 768px;
   margin: 0 auto 1rem auto;
+}
+
+.main-footer h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main-footer img {
+  opacity: 0.5;
+  filter: grayscale(1);
+  margin: auto;
+  width: 150px;
+  display: block;
 }
 
 .main-footer a {
@@ -126,10 +142,29 @@
 }
 
 .animated-layout {
-  perspective: 800;
+  position: relative;
+  min-height: 70vh;
+}
+
+.animated-layout-content {
   transform-style: preserve-3d;
-  transform-origin: left;
-  padding: 0 1rem;
+}
+
+.transition-page-title {
+  background: radial-gradient(var(--bg-color), transparent);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  font-size: 3rem;
+  aspect-ratio: 1/1;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  padding-top: 20vh;
 }
 
 @media only screen and (min-width: 768px) {

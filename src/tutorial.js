@@ -23,6 +23,7 @@ export default function TutorialPage() {
         previousTitle="Back"
         nextLinkPath="/cheat-sheet"
         nextTitle="Next"
+        artCardScryfallId="b88a762d-19ed-451d-a3a9-b3e7eea40f67"
       />
 
       <div>

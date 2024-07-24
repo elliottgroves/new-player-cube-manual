@@ -7,11 +7,12 @@ export default function GridSetupPage() {
     <AnimatedLayout>
     <section>
       <RelativeNavHeader
-        pageTitle='2 or 3 player setup ("Grid Draft")'
+        pageTitle="2 or 3 player setup"
         previousLinkPath="/build"
         previousTitle="Back"
         nextLinkPath="/finish-build"
         nextTitle="Next"
+        artCardScryfallId="7cb7ec70-a5a4-4188-ba1a-e88b81bdbad0"
       />
       
       <p>With this number of players it’s easiest to draft from face-up community packs. Start by taking the big stack of cards and shuffling them all together so everyone’s packs will be nice and random.

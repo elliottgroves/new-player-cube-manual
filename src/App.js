@@ -66,12 +66,14 @@ function Layout() {
       </main>
 
       <footer className="main-footer">
+        <img src={logo} className="logo" />
+        <h1>Welcome Cube</h1>
         <p>This site is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC.</p>
         <p>
           This site may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under <a href="https://company.wizards.com/en/legal/fancontentpolicy" target="_blank" rel="noreferrer">Wizards’ Fan Site Policy</a>. For example, Magic: The Gathering® is a trademark of Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards’ trademarks or other intellectual property, please visit their website at <a href="https://magic.wizards.com" target="_blank" rel="noreferrer">magic.wizards.com</a>. 
         </p>
         <p>
-          This site also uses card images created on <a href="https://mtg.design" target="_blank" rel="noreferrer">MTG.Design</a>.
+          This site also uses card images created on <a href="https://mtg.design" target="_blank" rel="noreferrer">MTG.Design</a> and card images from <a href="https://scryfall.com" target="_blank" rel="noreferrer">Scryfall</a>.
         </p>
         <p>
           Made with ❤️ by <a href="https://elliottgrov.es" target="_blank">Elliott Groves Design</a>
@@ -84,7 +86,7 @@ function Layout() {
 function Home() {
   return (
     <AnimatedLayout>
-    <div class="home-layout">
+    <div className="home-layout">
       <section className="hero">
         <Link to="/welcome">
           <button className="large-nav-button">

@@ -12,6 +12,7 @@ export default function BuildPage() {
         previousTitle="Back"
         nextLinkPath="/tutorial"
         nextTitle="Next"
+        artCardScryfallId="b78e2bca-bc93-464a-8911-8361abff2ac6"
       />
 
       <p>Almost time to play! To finish your deck, we need to pick your best cards add enough basic land cards so you can get the mana you need! You’re going to build a 40 card deck, and over many years of playing Magic players have figured out that a 40 card deck should have 17 lands to cast all its cards and not run out of steam.
