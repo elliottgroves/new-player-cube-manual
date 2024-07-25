@@ -11,7 +11,6 @@
   position: sticky;
   top: 0;
   width: 100%;
-  margin-top: 0.5rem;
 }
 
 .main-nav-content {
@@ -63,12 +62,6 @@
   margin-bottom: 1rem;
 }
 
-.main-content {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
 .home-layout {
   display: grid;
   grid-template-rows: 80svh 1fr;
@@ -109,15 +102,18 @@
 .main-footer {
   flex-grow: 1;
   margin-top: 5rem;
-  padding: 2rem 1rem 6rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   background-color: var(--primary-color);
   color: white;
-  font-size: 0.9rem;
 }
 
-.main-footer * {
+.main-footer .links-section, .main-footer .info-section {
   max-width: 768px;
   margin: 0 auto 1rem auto;
+}
+
+.main-footer .info-section {
+  font-size: 0.9rem;
 }
 
 .main-footer h1 {
@@ -129,7 +125,7 @@
   opacity: 0.5;
   filter: grayscale(1);
   margin: auto;
-  width: 150px;
+  width: 70px;
   display: block;
 }
 
@@ -141,30 +137,64 @@
   color: var(--visited-link-color);
 }
 
+.main-footer .links-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-footer .links-section ul {
+  flex-shrink: 1;
+  margin: 0;
+}
+
+.scroll-tracker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--button-color);
+  transform-origin: left;
+  z-index: 4;
+  transform: translate3d(0, 0, 0);
+} 
+
 .animated-layout {
   position: relative;
   min-height: 70vh;
+  background-color: var(--bg-color-dark);
 }
 
 .animated-layout-content {
   transform-style: preserve-3d;
+  transform-origin: top;
+  perspective: 200;
+  z-index: 1;
+  position: relative;
+  padding: 0 1rem;
+  background: var(--bg-color);
+  max-width: 768px;
+  margin: 0 auto;
+  box-shadow: 0 0 5px grey;
+  border-radius: 16px;
 }
 
 .transition-page-title {
-  background: radial-gradient(var(--bg-color), transparent);
-  position: absolute;
+  position: fixed;
+  background: var(--bg-color-dark);
+  box-shadow: 0 0 10px grey;
   top: 0;
   right: 0;
   left: 0;
-  font-size: 3rem;
-  aspect-ratio: 1/1;
+  bottom: 0;
+  margin: 0;
+  padding-top: 20vh;
   font-weight: bold;
+  font-size: 3rem;
   display: flex;
   justify-content: center;
-  z-index: 10;
+  z-index: 2;
   pointer-events: none;
-  opacity: 0;
-  padding-top: 20vh;
 }
 
 @media only screen and (min-width: 768px) {

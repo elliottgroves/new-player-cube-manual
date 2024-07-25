@@ -1,6 +1,8 @@
 .relative-nav-header {
-  max-width: min(100%, 500px);
-  margin: 1.5rem auto 0 auto;
+  width: min(100%, 500px);
+  margin: 0 auto;
+  padding-top: 1em;
+  display: block;
 }
 
 .relative-nav-header ul {
@@ -11,6 +13,7 @@
 }
 
 .relative-nav-header-card {
+  width: calc(100% - 2.5rem);
   padding: 0.5rem 0.25rem 1rem 0.25rem;
   margin: 0;
   border-radius: 1rem;
@@ -21,7 +24,8 @@
   background-clip: padding-box, border-box;
 }
 
-.relative-nav-header .relative-nav-title, .relative-nav-header .relative-nav-subheader {
+.relative-nav-header .relative-nav-title,
+.relative-nav-header .relative-nav-subheader {
   background: #faebd7;
   padding: 0.25rem 0.75rem;
   border-radius: 0.75rem;
@@ -30,10 +34,10 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
-  z-index: 2;
 }
 
 .relative-nav-header .relative-nav-subheader {
+  color: #555;
   border-width: 1px;
   font-size: 0.7rem;
   justify-content: center;
@@ -42,5 +46,6 @@
 .relative-nav-header .relative-nav-image {
   display: block;
   width: calc(100% - 1rem);
+  aspect-ratio: 626 / 457;
   margin: 0 0.5rem;
 }

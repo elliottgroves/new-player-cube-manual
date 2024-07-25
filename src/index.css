@@ -1,5 +1,6 @@
 :root {
   --bg-color: #FCF5E5;
+  --bg-color-dark: #b39978;
   --primary-color: maroon;
   --confirm-color: #63C132;
   --button-color: #ffa633;
@@ -18,7 +19,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   margin: 0;
-  background: linear-gradient(140deg, #feedc8 0%, #fffbf0 50vw, #feedc8 100%);
+  background: var(--bg-color-dark);
   min-height: 100svh;
   color: #121248;
 }
@@ -32,6 +33,10 @@ p {
 
 a:has(button) {
   cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }
 
 button {

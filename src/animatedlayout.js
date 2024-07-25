@@ -1,31 +1,61 @@
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router';
+import BraveKinDuo from './images/Brave-Kin Duo Art.webp';
 
 const layoutVariants = {
   initial: {
-    translateX: '100vw',
+    opacity: 0,
+    y: 10
   },
   enter: {
-    translateX: ['100vw', 0],
+    opacity: 1,
+    y: 0,
+    border: '0rem solid black',
+    transition: {
+      duration: 0.2,
+      easing: 'circIn' 
+    }
   },
   exit: {
-    translateX: [0, '-100vw'],
+    scale: 0.6,
+    opacity: 0.5,
+    y: '30vh',
+    rotateX: '-70deg',
+    border: '1rem solid black',
+    transition: {
+      duration: 1,
+      easing: [0.87, 0, 0.13, 1]
+    }
   },
 }
 
 const titleVariants = {
   initial: {
-    opacity: 1,
-    translateX: 0,
+    y: '100vh',
   },
   enter: {
-    opacity: [1, 0],
-    translateX: [0, 0],
+    y: '100vh',
   },
   exit: {
-    opacity: [0, 1],
-    translateX: ['2rem', 0],
+    y: 0,
+    transition: {
+      delay: 0.2,
+      duration: 0.8,
+      easing: [0.87, 0, 0.13, 1]
+    }
   },
+}
+
+const bgVariants = {
+  initial: {
+    background: 'var(--bg-color-dark)'
+  },
+  enter: {
+    background: 'var(--bg-color-dark)'
+  },
+  exit: {
+    background: ['var(--bg-color-dark)', 'grey']
+  }
 }
 
 export default function AnimatedLayout({children}) {
@@ -33,25 +63,28 @@ export default function AnimatedLayout({children}) {
   const parsedPathname = pathname ? pathname.replace('/', '').replace('-', ' ').toUpperCase() : 'Page';
 
   return (
-    <div className="animated-layout">
-      <motion.p
+    <motion.div 
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      variants={bgVariants}
+      className="animated-layout">
+      <motion.div
         initial="initial"
         animate="enter"
         exit="exit"
         variants={titleVariants}
         className="transition-page-title">
-        {parsedPathname}
-      </motion.p>
+      </motion.div>
       <motion.div
         initial="initial"
         animate="enter"
         exit="exit"
         variants={layoutVariants}
-        transition={{duration: 0.6, ease: 'easeInOut'}}
         className="animated-layout-content"
       >
-        { children }
+        {children}
       </motion.div>
-    </div>
+    </motion.div>
   );
 };

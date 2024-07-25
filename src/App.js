@@ -13,6 +13,7 @@ import { animate, stagger } from 'motion';
 import { AnimatePresence, motion } from 'framer-motion';
 import { cloneElement } from 'react';
 import AnimatedLayout from './animatedlayout.js';
+import ScrollTracker from './ScrollTracker.js';
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ function Layout() {
 
   return (
     <div className="main-layout">
+      <ScrollTracker />
       <nav className="main-nav">
         <div className="main-nav-content">
           <Link to="/" className="home-logo-link">
@@ -68,16 +70,30 @@ function Layout() {
       <footer className="main-footer">
         <img src={logo} className="logo" />
         <h1>Welcome Cube</h1>
-        <p>This site is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC.</p>
-        <p>
-          This site may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under <a href="https://company.wizards.com/en/legal/fancontentpolicy" target="_blank" rel="noreferrer">Wizards’ Fan Site Policy</a>. For example, Magic: The Gathering® is a trademark of Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards’ trademarks or other intellectual property, please visit their website at <a href="https://magic.wizards.com" target="_blank" rel="noreferrer">magic.wizards.com</a>. 
-        </p>
-        <p>
-          This site also uses card images created on <a href="https://mtg.design" target="_blank" rel="noreferrer">MTG.Design</a> and card images from <a href="https://scryfall.com" target="_blank" rel="noreferrer">Scryfall</a>.
-        </p>
-        <p>
-          Made with ❤️ by <a href="https://elliottgrov.es" target="_blank">Elliott Groves Design</a>
-        </p>
+        <div className="links-section">
+          <ul title="Pages">
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+          <ul title="Jump to">
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="info-section">
+          <p>This site is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC.</p>
+          <p>
+            This site may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under <a href="https://company.wizards.com/en/legal/fancontentpolicy" target="_blank" rel="noreferrer">Wizards’ Fan Site Policy</a>. For example, Magic: The Gathering® is a trademark of Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards’ trademarks or other intellectual property, please visit their website at <a href="https://magic.wizards.com" target="_blank" rel="noreferrer">magic.wizards.com</a>. 
+          </p>
+          <p>
+            This site also uses card images created on <a href="https://mtg.design" target="_blank" rel="noreferrer">MTG.Design</a> and card images from <a href="https://scryfall.com" target="_blank" rel="noreferrer">Scryfall</a>.
+          </p>
+          <p>
+            Made with ❤️ by <a href="https://elliottgrov.es" target="_blank">Elliott Groves Design</a>
+          </p>
+        </div>
       </footer>
     </div>
   );
