@@ -12,7 +12,7 @@ export default function Scroll({ title, children }) {
   return (
     <div className={'scroll' + (scrollOpen ? ' open' : '')} onClick={toggleScrollOpen}>
       <h3 className="title">{ title }</h3>
-      <div className="content">
+      <div className="content" onClick={(e) => {e.stopPropagation()}}>
         {children}
       </div>
     </div>

@@ -1,5 +1,6 @@
 .scroll {
   width: 100%;
+  background-color: var(--bg-color);
   position: relative;
   padding-bottom: 40px;
   margin-bottom: 2rem;
@@ -16,7 +17,11 @@
 
 .scroll::after {
   box-shadow: 0 0px 8px 2px #4443;
-  content: "";
+  content: "(tap to expand)";
+  display: flex;
+  justify-content: center;
+  color: var(--text-color-alt);
+  align-items: center;
   position: absolute;
   height: 40px;
   width: 100%;
@@ -27,10 +32,16 @@
 .scroll .content {
   padding: 0 1rem;
   overflow: hidden;
+  color: var(--text-color);
+  background: #FFF0CC;
+}
+
+.scroll .content hr {
+  margin: 0;
 }
 
 .scroll .title {
   padding: 0.5rem 1rem;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
