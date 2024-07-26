@@ -1,0 +1,123 @@
+:root {
+  --instants: lightblue;
+  --sorceries: maroon;
+  --none: #bbb;
+  --cs-text-color: black;
+  --cs-text-color-alt: #333;
+  --cs-text-color-dark: white;
+  --cs-text-color-dark-alt: #ddd;
+}
+
+.cheat-sheet {
+  overflow: auto;
+}
+.cheat-sheet h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.cheat-sheet .color-key, .cheat-sheet .combat-tips {
+  background: var(--bg-color);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 3px solid var(--accent-color);
+}
+
+.cheat-sheet .color-key {
+  font-size: 0.9rem;
+}
+
+.cheat-sheet .color-key p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.25rem 0;
+}
+
+.cheat-sheet .color-key .color {
+  aspect-ratio: 1/1;
+  width: 1.5rem;
+  border-radius: 4px;
+}
+
+.cheat-sheet .steps-and-phases, .cheat-sheet .color-key, .cheat-sheet .combat-tips {
+  margin: 1rem auto 1rem auto;
+  max-width: 450px;
+}
+.cheat-sheet .steps-and-phases li {
+  display: flex;
+  justify-content: space-between;
+}
+.cheat-sheet .steps-and-phases li, .cheat-sheet .steps-and-phases .sublist-title {
+  padding: 0.5rem;
+  border-bottom: 1px solid #fff;
+}
+.cheat-sheet .steps-and-phases li span {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  color: var(--cs-text-color-alt);
+}
+
+.cheat-sheet .steps-and-phases .sublist {
+  padding: 0;
+  flex-flow: column;
+}
+.cheat-sheet .steps-and-phases .sublist ul {
+  flex-grow: 1;
+}
+.cheat-sheet .steps-and-phases .sublist-title {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--cs-text-color);
+}
+.cheat-sheet .steps-and-phases .sublist-title h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+.cheat-sheet .steps-and-phases .sublist li:not(.sublist-title) {
+  padding-left: 2rem;
+}
+
+.cheat-sheet .instants {
+  background: var(--instants);
+}
+.cheat-sheet .sorceries {
+  background: var(--sorceries);
+  color: var(--cs-text-color-dark);
+}
+.cheat-sheet li.sorceries span {
+  color: var(--cs-text-color-dark-alt);
+}
+.cheat-sheet .none {
+  background: var(--none);
+}
+
+.cheat-sheet .combat-tips {
+  padding: 0;
+  overflow: hidden;
+}
+
+.cheat-sheet .combat-tips h3 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  background: var(--accent-color);
+}
+.cheat-sheet .combat-tips ul {
+  padding-right: 0.5rem;
+}
+.cheat-sheet .combat-tips li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+.cheat-sheet .combat-tips li svg {
+  flex-shrink: 0;
+}

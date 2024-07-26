@@ -1,8 +1,8 @@
 .scroll {
   width: 100%;
-  background: linear-gradient(#FADB6F, #FADB6F 1rem);
   position: relative;
   padding-bottom: 40px;
+  margin-bottom: 2rem;
   color: maroon;
   cursor: pointer;
   display: grid;

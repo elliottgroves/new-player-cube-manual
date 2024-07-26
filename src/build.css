@@ -1,0 +1,53 @@
+.build-page ul {
+}
+.build-page .colors-list {
+  color: white;
+}
+.build-page .colors-list .colors-list-color {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 0.5rem 1rem;
+}
+.build-page .colors-list .colors-list-color h3 {
+  margin: 0;
+}
+.build-page .colors-list .colors-list-color p {
+  margin: 0;
+}
+.build-page .colors-list .colors-list-color img {
+  max-width: 80px;
+  justify-self: center;
+  align-self: center;
+}
+.build-page .colors-list .colors-list-color .creature-types {
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.build-page .colors-list .colors-list-color .desc {
+  font-size: 0.9rem;
+  padding-right: 0.5rem;
+}
+
+.build-page .colors-list .white {
+  background: rgb(226,216,189);
+  color: var(--text-color);
+}
+.build-page .colors-list .white .creature-types {
+  color: #555;
+}
+.build-page .colors-list .blue {
+  background: rgb(74,153,200);
+}
+.build-page .colors-list .black {
+  background: rgb(41, 41, 38);
+}
+.build-page .colors-list .red {
+  background: rgb(173, 77, 63);
+}
+.build-page .colors-list .green {
+  background: rgb(75, 99, 74);
+}

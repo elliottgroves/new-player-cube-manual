@@ -162,17 +162,16 @@
 .animated-layout {
   position: relative;
   min-height: 70vh;
-  background-color: var(--bg-color-dark);
+  background-color: var(--bg-color);
 }
 
 .animated-layout-content {
   transform-style: preserve-3d;
-  transform-origin: top;
-  perspective: 200;
+  transform-origin: 2rem center;
   z-index: 1;
   position: relative;
   padding: 0 1rem;
-  background: var(--bg-color);
+  background: white;
   max-width: 768px;
   margin: 0 auto;
   box-shadow: 0 0 5px grey;
@@ -181,7 +180,7 @@
 
 .transition-page-title {
   position: fixed;
-  background: var(--bg-color-dark);
+  background: var(--bg-color);
   box-shadow: 0 0 10px grey;
   top: 0;
   right: 0;

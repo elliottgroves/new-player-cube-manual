@@ -26,27 +26,13 @@ export default function TutorialPage() {
         artCardScryfallId="b88a762d-19ed-451d-a3a9-b3e7eea40f67"
       />
 
-      <div>
-        <p>Jump to</p>
-        <ul>
-          <li>Start the Game</li>
-          <li>Main Phase</li>
-          <li>Combat</li>
-          <li>Instant Cards</li>
-        </ul>
-      </div>
-
-
-      <p>Let's start by picking who's going first. Roll dice or whatever random method you like, and whoever wins gets to pick if they want to <b>play</b> first or <b>draw</b> first. The player who goes first skips their draw on their first turn, but gets the chance to play cards before their opponent.</p>
-      <p>Once that's decided, shuffle up your deck face down, then draw 7 cards.
-
-You need a good mix of lands and spells to play - if you have 1 or less lands or 6 or more lands, you should take a mulligan.
+      <p>Let's start by deciding who's going first. Roll dice or whatever random method you like, and whoever wins gets to pick if they want to <b>play</b> first or <b>draw</b> first. The player who goes first skips their draw on their first turn, but gets the chance to play cards before their opponent.</p>
+      <p>Once that's decided, shuffle up your deck face down, then draw 7 cards. You need a good mix of lands and spells to play - if you have 1 or less lands or 6 or more lands, you should take a mulligan.
       </p>
 
-      <Scroll title={'Tell me how to mulligan'}>
+      <Scroll style={{ background: 'red' }} title={'Tell me how to mulligan'}>
         <p>Take some cards and put em on bottom</p>
       </Scroll>
-
       <p>Once both players are happy with their hands, let’s begin!
 
 Both players start with 20 life points - you win by reducing your opponent’s life points to 0. The best way to do this is by attacking your opponent with your creatures.
@@ -65,6 +51,16 @@ Each turn, you can play one land, spend mana from your lands to pay for spells, 
 
       <p>Let’s explain starting with the main phase.</p>
     </section>
+      <Scroll title={'Main Phase'}>
+        <p>Take some cards and put em on bottom</p>
+      </Scroll>
+      <Scroll title={'Combat'}>
+        <p>Take some cards and put em on bottom</p>
+      </Scroll>
+      <Scroll title={'Instants'}>
+        <p>Take some cards and put em on bottom</p>
+      </Scroll>
+
     <section className="main-phase-section">
       <h3>Main Phase</h3>
       <p>Each turn, you get to play one land card from your hand.</p>

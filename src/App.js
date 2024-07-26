@@ -135,6 +135,7 @@ function Home() {
 function About() {
   return (
     <section>
+      <p>This site uses <a href="https://phosphoricons.com/" target="_blank" rel="noreferrer">Phosphor Icons</a>.</p>
     </section>
   );
 }

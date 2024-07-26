@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import BraveKinDuo from './images/Brave-Kin Duo Art.webp';
 import './relative-nav.css';
 
-export default function RelativeNavHeader({ pageTitle, previousLinkPath, previousTitle, nextLinkPath, nextTitle, titleEmoji, artCardScryfallId }) {
+export default function RelativeNavHeader({ pageTitle, previousLinkPath, previousTitle, nextLinkPath, nextTitle, iconFunction, artCardScryfallId }) {
   const [name, setName] = useState('Brave-Kin Duo');
   const [artist, setArtist] = useState('Devin Platts');
   const [imageSrc, setImageSrc] = useState('');
@@ -22,10 +22,12 @@ export default function RelativeNavHeader({ pageTitle, previousLinkPath, previou
 
   }, []);
 
+  const icon = iconFunction ? iconFunction() : '';
+
   return (
     <header className="relative-nav-header">
       <figure className="relative-nav-header-card">
-        <h2 className="relative-nav-title"><span>{ pageTitle }</span><span>{ titleEmoji }</span></h2>
+        <h2 className="relative-nav-title"><span>{ pageTitle }</span>{icon}</h2>
         <img className="relative-nav-image" src={ imageSrc }/>
         <figcaption className="relative-nav-subheader"><span>{ name } by { artist }</span></figcaption>
       </figure>

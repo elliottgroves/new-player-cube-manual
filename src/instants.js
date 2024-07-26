@@ -13,7 +13,7 @@ Instants can really be played any time. They can even be played <b>"in response"
 Let's say your opponent says they want to Shock your Grizzly Bears. Before that Shock <b>"resolves"</b> (happens), you can say, <b>"in response"</b>, and cast Giant Growth on your Grizzly Bears. If your opponent does not have another response, then the two spells happen: yours first, then theirs. Your Grizzly Bears will be a 5/5 with 2 damage on it. 
       </p>
 
-      <p>How did we know who's spell resolved first? We keep track of it using <b>the stack</b>. Things go in on top of the stack, and once both players are done adding to it, it resolves from the top down. In the example above, Shock went on the stack first, then Giant Growth, and the stack gets resolved from the top down: Giant Growth fully resolves, then Shock fully resolves.</p>
+      <p>How did we know who's spell resolved first? We keep track of it using <b>the stack</b>. Things go in on top of the stack, and once both players are done adding to it, it resolves from the top down. In the example above, Shock went on the stack first, then Giant Growth, and the stack gets resolved from the top down: Giant Growth resolves, then Shock resolves.</p>
 
       <p>Some instant cards even <b>counter</b> other spells - countered spells have no effect and go straight to the graveyard.</p>
 
