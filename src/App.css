@@ -202,6 +202,48 @@ svg.inline-icon {
   margin-right: 0.25rem;
 }
 
+.two-colors-reminder {
+  background: var(--primary-color);
+  outline: 3px solid var(--accent-color);
+  box-shadow: 0 5px 10px grey;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  padding: 0.5em 1em;
+  letter-spacing: 0;
+  line-height: 1.25em;
+  border-radius: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.two-colors-reminder::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 50px;
+  height: 200%;
+  background: #fff5;
+  transform: rotate(45deg);
+  animation: shine 4s infinite cubic-bezier(0.76, 0, 0.24, 1); 
+}
+@keyframes shine {
+  0% {
+    left: -50%;
+  }
+  80% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+.two-colors-reminder strong {
+  white-space: pre;
+}
+
 @media only screen and (min-width: 768px) {
   .main-nav .main-nav-content {
     margin: 0.5rem 1rem;

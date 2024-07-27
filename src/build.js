@@ -44,11 +44,13 @@ export default function BuildPage() {
         artCardScryfallId="31782426-4128-47af-8922-0207a3233885"
       />
   
-      <p>You’re about to play one of the most time-honored types of <i>Magic: the Gathering</i>: <b>draft</b>. You all are about to make decks on the fly using the cards in front of you.
+      <p>You’re about to play one of the most time-honored types of <i>Magic: the Gathering</i>: <b>draft</b>. You all are about to make decks on the fly using the cards in front of you.</p>
   
-  The setup depends on how many people are playing, but the reasons to pick cards are the same. These cards are specially selected so you’ll be able to make a deck that works as long as you follow one guideline:</p>
+      <p className="mb-0">The setup depends on how many people are playing, but the reasons to pick cards are the same. These cards are specially selected so you’ll be able to draft a deck as long as you follow one guideline:</p>
       
-      <strong>Choose two colors and try to draft only cards of those two colors!</strong>
+      <p className="two-colors-reminder">
+        <strong>Pick 2 colors and try to<br/>draft only those colors!</strong>
+      </p>
       
       <p>There are five <b>colors</b> of <b>mana</b> in <i>Magic</i>:</p>
       
@@ -111,7 +113,7 @@ export default function BuildPage() {
         <figcaption>Molten Tributary adds blue or red mana, so it's perfect for a deck playing both blue cards and red cards.</figcaption>
       </figure>
   
-      <p>With that in mind, and remembering to <b>pick cards of only two colors</b>, it’s time to start the action!</p>
+      <p>With that in mind, and remembering to pick cards of only <b>two colors</b>, it’s time to start the action!</p>
   
       <Link to="/grid-setup">
         <button className="large-nav-button">2 or 3 player setup</button>

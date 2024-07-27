@@ -2,7 +2,7 @@ import RelativeNavHeader from './relative-nav.js';
 import AnimatedLayout from './animatedlayout.js';
 import { Link } from 'react-router-dom';
 import Scroll from './Scroll.js';
-import { Info, DotOutline, Mountains, Sword, MagicWand, Stack } from '@phosphor-icons/react';
+import { Wrench, Info, DotOutline, Mountains, Sword, MagicWand, Stack } from '@phosphor-icons/react';
 import two from './icons/2.svg';
 import r from './icons/r.svg';
 import './finish-build.css';
@@ -17,6 +17,7 @@ export default function BuildPage() {
         previousTitle="Back"
         nextLinkPath="/tutorial"
         nextTitle="Next"
+        iconFunction={() => <Wrench />}
         artCardScryfallId="b78e2bca-bc93-464a-8911-8361abff2ac6"
       />
 

@@ -27,10 +27,10 @@ body {
 }
 
 p {
-  line-height: 1.5rem;
-  margin-bottom: 2rem;
-  letter-spacing: 0.03rem;
-  word-spacing: 0.03rem;
+  line-height: 1.5em;
+  margin-bottom: 2em;
+  letter-spacing: 0.03em;
+  word-spacing: 0.03em;
 }
 
 a:has(button) {
@@ -65,4 +65,8 @@ button:hover, button:focus {
 
 .main-layout {
   min-height: 100svh;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
 }
