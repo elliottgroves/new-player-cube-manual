@@ -2,9 +2,10 @@ import RelativeNavHeader from './relative-nav.js';
 import AnimatedLayout from './animatedlayout.js';
 import { Link } from 'react-router-dom';
 import Scroll from './Scroll.js';
-import { Info, DotOutline } from '@phosphor-icons/react';
+import { Info, DotOutline, Mountains, Sword, MagicWand, Stack } from '@phosphor-icons/react';
 import two from './icons/2.svg';
 import r from './icons/r.svg';
+import './finish-build.css';
 
 export default function BuildPage() {
   return (
@@ -19,12 +20,34 @@ export default function BuildPage() {
         artCardScryfallId="b78e2bca-bc93-464a-8911-8361abff2ac6"
       />
 
-      <p>Almost time to play! We're going to play with 40 card decks. Over many years of playing Magic players have figured out that a 40 card deck should have 17 <b>lands</b> to cast all its cards and not run out of steam. We're going to add <b>basic lands</b> to your deck to give you enough. Basic lands only tap for one color of mana.</p>
+      <p>Now that we have our cards, we need to build our deck. Let's start by grabbing all our cards that are our two colors. This includes gold cards that are both our colors and lands that add both our colors of mana.</p>
+      
+      <p>We're going to make a 40 card deck. You want your deck to be mostly creatures and lands with some other spells to round it out. Grab as many <b>basic lands</b> as you need from the cube box - if your deck has more cards of one color, include more basic lands that add that color. A good starting point is this:</p>
+      
+      <div className="deck-ratio-explainer">
+        <figure>
+          <Mountains size={48} />
+          <figcaption><span className="num">17-18</span>lands</figcaption>
+        </figure>
+        <figure>
+          <Sword size={48} />
+          <figcaption><span className="num">15-17</span>creatures</figcaption>
+        </figure>
+        <figure>
+          <MagicWand size={48} />
+          <figcaption><span className="num">6-8</span>other</figcaption>
+        </figure>
+        <div>=</div>
+        <figure>
+          <Stack size={48} />
+          <figcaption><span className="num">40</span>total</figcaption>
+        </figure>
+      </div>
+      
+      <p>It's also a good idea to tend towards cards with lower mana costs, having mostly cards that cost 2-4 mana. You can figure out how much total mana a card costs by adding the number of colored mana symbols <span className="inline-no-wrap">(<img src={r}/>)</span> to the other number <span className="inline-no-wrap">(<img src={two} />)</span>.</p>
+    <p>That first number means you can spend mana of any color when paying for that part of the mana cost. For example, <span className="inline-no-wrap"><img src={two}/><img src={r}/><img src={r}/></span> means a card costs <b>four mana</b> total: <b>two mana of any color</b> and <b>two red mana</b>.</p> 
 
-      <p>Hopefully you were able to pick up cards of two colors. First, set aside all cards that aren’t those colors. Golden two-color cards that are both your colors can stay, same with lands that tap for both your colors.</p>
-
-      <p>Now we need to pick our 23 favorite cards, then we can finalize our deck by adding basic lands. Picking which cards to include isn’t an exact science. For your first game, don’t sweat it too much.</p>
-      <Scroll title={'Help me pick my best cards'}>
+      <Scroll title={'Need help choosing?'}>
         <p>The <i>Magic</i> community has an acronym to help evaluate which cards are best in a draft:</p>
         <div className="bread-explainer">
           <h4>B.R.E.A.D.</h4>
@@ -46,14 +69,11 @@ export default function BuildPage() {
             </li>
           </ul>
         </div>
-        <p>You can also decide what to include based on its <b>mana cost</b>. You want your deck to have a good balance of early and late plays.</p>
-        <p>You can figure out how much total mana a card costs by adding the number of colored mana symbols (<img src={r}/>) to the other number (<img src={two} />). That number means you can spend mana of any color when paying for that part of the mana cost.</p>
-      
-        <p>For example, <img src={two}/><img src={r}/><img src={r}/> means a card costs <b>four mana</b> total: <b>two mana of any color</b> and <b>two red mana</b>.</p> 
+        <p>If you're stuck picking between a couple cards to remove, you can try and put them in these categories as a tiebreaker. The higher up the category is, the better.</p>
+        <p>Also, generally speaking, cards that are two colors are more powerful than mono-colored cards, so it's a good idea to include the cards that are both your colors in your deck.</p>
       </Scroll>
 
-      <p>Once you have 23 cards chosen, add basic lands until you have a 40 card deck. If your deck has more cards of one color than the other, add more basic lands that add that color.</p>
-      <p>And with that, you are an officially licensed Magic deckbuilder! If you have an odd number of people, feel free to play a 3-player game or take turns playing. Otherwise split into 2 person groups and get ready to play!</p>
+      <p>Congratulations - you are an officially licensed <i>Magic</i> deckbuilder! If you have an odd number of people, feel free to play a 3-player game or take turns playing. Otherwise split into 2 person groups and get ready to play!</p>
       <Link to="/tutorial">
         <button className="large-nav-button">How to play</button>
       </Link>

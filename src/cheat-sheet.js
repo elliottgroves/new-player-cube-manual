@@ -61,10 +61,10 @@ export default function CheatSheetPage() {
         <h3>Combat Tips</h3>
         <ul>
           <li>
-            <DotOutline size={24}/><span>Creatures can't tap the turn they're played, so they also can't attack.</span>
+            <DotOutline size={24}/><span>Creatures can't tap the turn you play them, so they also can't attack.</span>
           </li>
           <li>
-            <DotOutline size={24}/><span>You declare all your attackers at the same time by tapping the creatures.</span>
+            <DotOutline size={24}/><span>You declare all your attackers at the same time. Tap a creature to attack with it.</span>
           </li>
           <li>
             <DotOutline size={24}/><span>Untapped creatures can block attackers.</span>

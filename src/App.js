@@ -1,5 +1,6 @@
 import './App.css';
 import logo from './placeholder-logo.svg';
+import Home from './home.js';
 import Welcome from './welcome.js';
 import Build from './build.js';
 import GridSetup from './grid-setup.js';
@@ -96,39 +97,6 @@ function Layout() {
         </div>
       </footer>
     </div>
-  );
-}
-
-function Home() {
-  return (
-    <AnimatedLayout>
-    <div className="home-layout">
-      <section className="hero">
-        <Link to="/welcome">
-          <button className="large-nav-button">
-            <span>Get Started</span>
-          </button>
-        </Link>
-      </section>
-      <section className="home-nav-buttons">
-        <Link to="/build">
-          <button className="large-nav-button">
-            <span>Build your deck</span>
-          </button>
-        </Link>
-        <Link to="/tutorial">
-          <button className="large-nav-button">
-            <span>How to play</span>
-          </button>
-        </Link>
-        <Link to="/cheat-sheet">
-          <button className="large-nav-button">
-            <span>Turn cheat sheet</span>
-          </button>
-        </Link>
-      </section>
-    </div>
-    </AnimatedLayout>
   );
 }
 

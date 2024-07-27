@@ -1,0 +1,90 @@
+.deck-ratio-explainer {
+  display: flex;
+  max-width: 450px;
+  margin: auto;
+  gap: 0.25rem;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.deck-ratio-explainer * {
+  text-align: center;
+  line-height: 1.3rem;
+}
+.deck-ratio-explainer figure {
+  margin: 0;
+}
+.deck-ratio-explainer figure img {
+  width: 100%;
+  height: auto;
+}
+.deck-ratio-explainer figcaption {
+  padding-top: 0;
+}
+.deck-ratio-explainer .num {
+}
+.deck-ratio-explainer .num::after {
+  content: "\a";
+  white-space: pre;
+}
+
+.inline-no-wrap {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  vertical-align: middle;
+}
+  
+
+.bread-explainer {
+  background: #f0d1a0;
+  border: 6px solid #6d3200;
+  padding: 0.5rem;
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+  border-radius: 1rem;
+}
+.bread-explainer::before, .bread-explainer::after {
+  content: "";
+  background: inherit;
+  border-top: 6px solid #6d3200;
+  z-index: 1;
+  position: absolute;
+  top: -10%;
+  width: 55%;
+  height: 20%;
+  border-radius: 40%;
+}
+.bread-explainer:before {
+  left: -5%;
+}
+.bread-explainer::after {
+  right: -5%;
+}
+
+.bread-explainer h4 {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  color: #6d3200;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 0rem;
+}
+.bread-explainer li {
+  z-index: 2;
+  position: relative;
+  padding: 0.25rem 0;
+  border-top: 2px solid #6d3200;
+}
+.bread-explainer li span {
+  color: var(--text-color-alt);
+}
+.bread-explainer li b {
+  color: #6d3200;
+  font-size: 1.1em;
+}
+
+
