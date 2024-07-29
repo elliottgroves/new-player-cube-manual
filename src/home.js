@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { motion, useMotionValue, useTransform, useAnimate } from 'framer-motion';
-import { useEffect } from 'react';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import AnimatedLayout from './animatedlayout.js';
 import './home.css';
 import logo from './placeholder-logo.svg';
@@ -53,6 +52,7 @@ const cardAnimation = (z) => {
           duration: 2,
           repeat: Infinity,
           repeatType: 'mirror',
+          repeatDelay: 0.5,
           ease: [0.22, 1, 0.36, 1]
         }
       },
@@ -61,8 +61,6 @@ const cardAnimation = (z) => {
 }
 
 export default function Home() {
-  const [scope, animate] = useAnimate();
-
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [100, -100], [-20, 60]);
@@ -77,16 +75,15 @@ export default function Home() {
       className="home-layout">
       <section className="hero">
         <motion.div
-          initial="initial"
-          animate="enter"
-          exit="exit"
-          variants={heroVariants}
+          style={{ x, y, rotateX, rotateY }}
+          drag
+          dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
           className="hero-cards-container">
           <motion.div
-            ref={scope}
-            style={{ x, y, rotateX, rotateY }}
-            drag
-            dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            variants={heroVariants}
             className="hero-cards">
             <motion.div {...cardAnimation(-160)} className="hero-card one"></motion.div>
             <motion.div {...cardAnimation(-120)} className="hero-card two"></motion.div>
@@ -97,14 +94,13 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </motion.div>
-        
+      </section>
+      <section className="home-nav-buttons">
         <Link to="/welcome">
           <motion.button whileTap={{ scale: 0.8 }} className="large-nav-button">
             <span>Get Started</span>
           </motion.button>
         </Link>
-      </section>
-      <section className="home-nav-buttons">
         <Link to="/build">
           <button className="large-nav-button">
             <span>Build your deck</span>
