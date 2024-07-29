@@ -26,7 +26,7 @@ export default function BuildPage() {
     return {
       initial: 'hidden',
       whileInView: 'inView',
-      viewport: { margin: '-120px', once: true },
+      viewport: { margin: '-100px', once: true },
       variants
     }
   }

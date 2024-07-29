@@ -15,6 +15,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { cloneElement } from 'react';
 import AnimatedLayout from './animatedlayout.js';
 import ScrollTracker from './ScrollTracker.js';
+import RelativeNavHeader from './relative-nav.js';
+import { Scroll } from '@phosphor-icons/react';
 
 export default function App() {
   return (
@@ -102,8 +104,24 @@ function Layout() {
 
 function About() {
   return (
-    <section>
-      <p>This site uses <a href="https://phosphoricons.com/" target="_blank" rel="noreferrer">Phosphor Icons</a>.</p>
-    </section>
+    <AnimatedLayout>
+      <section>
+        <RelativeNavHeader
+          pageTitle="About"
+          previousLinkPath="/build"
+          previousTitle="Back"
+          nextLinkPath="/"
+          nextTitle="Next"
+          iconFunction={() => <Scroll />}
+          artCardScryfallId="34e61e0f-d0f3-492a-92f1-36f72a91583a"
+        />
+        
+        <p>Welcome Cube is a passion project that started in 2020.</p>
+
+        <p>Cube is a way to play <i>Magic</i>. You can find the current list of all the cards in the Welcome Cube <a href="https://cubecobra.com/cube/list/welcome-cube" target="_blank" rel="noreferrer">here</a>. (Also, if you're curious, <a href="https://cubecobra.com/" target="_blank" rel="noreferrer">Cube Cobra</a> is a wonderful site that hosts cube lists - great place to browse cards!)</p>
+        
+        <p>This site is built with <a href="https://react.dev/" target="_blank" rel="noreferrer">React</a> and <a href="https://www.framer.com/motion/" target="_blank" rel="noreferrer">Framer Motion</a>. It uses <a href="https://phosphoricons.com/" target="_blank" rel="noreferrer">Phosphor Icons</a>.</p>
+      </section>
+    </AnimatedLayout>
   );
 }

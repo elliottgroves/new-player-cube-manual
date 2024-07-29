@@ -67,13 +67,13 @@ export default function CheatSheetPage() {
             <DotOutline size={24}/><span>You declare all your attackers at the same time. Tap a creature to attack with it.</span>
           </li>
           <li>
-            <DotOutline size={24}/><span>Untapped creatures can block attackers.</span>
+            <DotOutline size={24}/><span>The defending player can block your attackers with their untapped creatures.</span>
           </li>
           <li>
-            <DotOutline size={24}/><span>Multiple creatures can block one attacker. The attacker picks the order the blockers take damage.</span>
+            <DotOutline size={24}/><span>Multiple creatures can block one attacker. The attacking player picks the order the blockers take damage.</span>
           </li>
           <li>
-            <DotOutline size={24}/><span>A creature that takes more damage than its toughness in one turn dies.</span>
+            <DotOutline size={24}/><span>A creature that takes more damage than its toughness in one turn dies and is put in the graveyard.</span>
           </li>
         </ul>
       </div>
@@ -81,7 +81,10 @@ export default function CheatSheetPage() {
       {/* combat animation here */}
 
       <Link to="/tutorial">
-        <button className="large-nav-button">Full game tutorial</button>
+        <button className="large-nav-button">Full tutorial</button>
+      </Link>
+      <Link to="/instants">
+        <button className="large-nav-button">Detailed instants rules</button>
       </Link>
     </section>
     </AnimatedLayout>

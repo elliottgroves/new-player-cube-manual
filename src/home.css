@@ -1,0 +1,48 @@
+.home-layout {
+  display: grid;
+  grid-template-rows: 80svh 1fr;
+}
+
+.home-layout .hero {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.home-layout .hero .large-nav-button {
+  font-size: 3rem;
+}
+
+.home-nav-buttons .large-nav-button {
+  margin-bottom: 1rem;
+}
+
+.home-layout .hero-cards-container {
+  align-self: center;
+  justify-self: center;
+  transform: translateZ(80px);
+}
+
+.hero-cards {
+  position: relative;
+  width: 150px;
+  aspect-ratio: 5 / 7;
+  transform-style: preserve-3d;
+}
+
+.hero-card {
+  transform-style: preserve-3d;
+  position: absolute;
+  aspect-ratio: 5 / 7;
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px grey;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-card img {
+  width: 30%;
+  height: auto;
+}

@@ -1,17 +1,19 @@
 import RelativeNavHeader from './relative-nav.js';
 import AnimatedLayout from './animatedlayout.js';
 import { Link } from 'react-router-dom';
+import { Stack } from '@phosphor-icons/react';
 
 export default function DraftSetupPage() {
   return (
     <AnimatedLayout>
     <section>
       <RelativeNavHeader
-        pageTitle="4 or more player setup"
+        pageTitle="4+ player setup"
         previousLinkPath="/build"
         previousTitle="Back"
         nextLinkPath="/"
         nextTitle="Next"
+        iconFunction={() => <Stack />}
         artCardScryfallId="880047fd-d258-40fb-bcd5-37cb26678dfe"
       />
       
@@ -19,7 +21,9 @@ export default function DraftSetupPage() {
 
 Once the cards are shuffled together, each player can make their face-down packs. For 4-7 players, 6 packs of 7 cards works out well. For 8 or more players, 3 packs of 15 cards each is the traditional number. (These are also just recommendations, feel free to experiment after playing some!)</p>
 
-      <strong>Choose two colors and try to draft only cards of those two colors!</strong>
+      <p className="two-colors-reminder">
+        <strong>Pick 2 colors and try to<br/>draft only those colors!</strong>
+      </p>
 
       <p>Now that everyone has their packs, we can start drafting. Take your first face-down pack and look at it without showing anyone. Choose a card from it and put it in front of you face down. Afterwards, pass your pack face-down to the left. Then pick up the pack the player to your right has passed you and repeat this process until there are no cards left in that pack.</p>
 

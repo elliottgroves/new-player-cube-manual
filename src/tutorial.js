@@ -11,6 +11,7 @@ import two from './icons/2.svg';
 import g from './icons/g.svg';
 import CentaurCourser from './images/Centaur Courser.webp';
 import AnimatedLayout from './animatedlayout.js';
+import { Crown } from '@phosphor-icons/react';
 
 export default function TutorialPage() {
   return (
@@ -23,6 +24,7 @@ export default function TutorialPage() {
         previousTitle="Back"
         nextLinkPath="/cheat-sheet"
         nextTitle="Next"
+        iconFunction={() => <Crown />}
         artCardScryfallId="b88a762d-19ed-451d-a3a9-b3e7eea40f67"
       />
 
@@ -31,7 +33,8 @@ export default function TutorialPage() {
       </p>
 
       <Scroll style={{ background: 'red' }} title={'Tell me how to mulligan'}>
-        <p>Take some cards and put em on bottom</p>
+        <p>Shuffle your hand back into your deck and draw a new hand of 7 cards. If you keep that hand, put one card from your hand on the bottom of your deck.</p>
+        <p>The offical rule if you need to mulligan multiple times is to put one additional card back each time (2 mulligans means put 2 on bottom, etc). For your first games if you need to mulligan more than once I would recommend putting only one card back after any mulligans so you can both play a more fun game, but it's up to you.</p>
       </Scroll>
       <p>Once both players are happy with their hands, let’s begin!
 
@@ -51,16 +54,6 @@ Each turn, you can play one land, spend mana from your lands to pay for spells, 
 
       <p>Let’s explain starting with the main phase.</p>
     </section>
-      <Scroll title={'Main Phase'}>
-        <p>Take some cards and put em on bottom</p>
-      </Scroll>
-      <Scroll title={'Combat'}>
-        <p>Take some cards and put em on bottom</p>
-      </Scroll>
-      <Scroll title={'Instants'}>
-        <p>Take some cards and put em on bottom</p>
-      </Scroll>
-
     <section className="main-phase-section">
       <h3>Main Phase</h3>
       <p>Each turn, you get to play one land card from your hand.</p>

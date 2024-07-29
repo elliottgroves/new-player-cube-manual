@@ -1,0 +1,28 @@
+.grid-explainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
+  margin: 0 auto 2rem auto;
+
+  max-width: 550px;
+}
+
+.grid-display {
+  position: sticky;
+  top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 3px;
+  margin: auto;
+  width: 159px;
+  justify-items: center;
+}
+
+.grid-display .grid-card {
+  background: #aaa;
+  width: 50px;
+  aspect-ratio: 5/7;
+  border-radius: 5px;
+}
+

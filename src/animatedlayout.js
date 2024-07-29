@@ -17,7 +17,7 @@ const layoutVariants = {
     x: [0, 0],
     transition: {
       duration: 0.5,
-      easing: [0.87, 0, 0.13, 1] 
+      ease: 'circOut'
     }
   },
   exit: {
@@ -26,38 +26,9 @@ const layoutVariants = {
     x: '-100vw',
     transition: {
       duration: 0.5,
-      easing: 'easeIn' 
+      ease: 'easeInOut' 
     }
   },
-}
-
-const titleVariants = {
-  initial: {
-    y: '100vh',
-  },
-  enter: {
-    y: '100vh',
-  },
-  exit: {
-    y: 0,
-    transition: {
-      delay: 0.2,
-      duration: 0.8,
-      easing: [0.87, 0, 0.13, 1]
-    }
-  },
-}
-
-const bgVariants = {
-  initial: {
-    background: 'var(--bg-color)'
-  },
-  enter: {
-    background: 'var(--bg-color)'
-  },
-  exit: {
-    background: ['var(--bg-color)', 'grey']
-  }
 }
 
 export default function AnimatedLayout({children}) {
@@ -65,17 +36,7 @@ export default function AnimatedLayout({children}) {
   const parsedPathname = pathname ? pathname.replace('/', '').replace('-', ' ').toUpperCase() : 'Page';
 
   return (
-    <motion.div 
-      initial="initial"
-      animate="enter"
-      exit="exit"
-      className="animated-layout">
-      <motion.div
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={titleVariants}>
-      </motion.div>
+    <div> 
       <motion.div
         initial="initial"
         animate="enter"
@@ -85,6 +46,6 @@ export default function AnimatedLayout({children}) {
       >
         {children}
       </motion.div>
-    </motion.div>
+    </div>
   );
 };

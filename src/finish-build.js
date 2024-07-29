@@ -2,7 +2,7 @@ import RelativeNavHeader from './relative-nav.js';
 import AnimatedLayout from './animatedlayout.js';
 import { Link } from 'react-router-dom';
 import Scroll from './Scroll.js';
-import { Wrench, Info, DotOutline, Mountains, Sword, MagicWand, Stack } from '@phosphor-icons/react';
+import { SealCheck, Info, DotOutline, Mountains, Sword, MagicWand, Stack } from '@phosphor-icons/react';
 import two from './icons/2.svg';
 import r from './icons/r.svg';
 import './finish-build.css';
@@ -17,7 +17,7 @@ export default function BuildPage() {
         previousTitle="Back"
         nextLinkPath="/tutorial"
         nextTitle="Next"
-        iconFunction={() => <Wrench />}
+        iconFunction={() => <SealCheck />}
         artCardScryfallId="b78e2bca-bc93-464a-8911-8361abff2ac6"
       />
 
@@ -78,6 +78,7 @@ export default function BuildPage() {
       <Link to="/tutorial">
         <button className="large-nav-button">How to play</button>
       </Link>
+      <p className="postscript"><Info className="inline-icon"/>Deckbuilding tips inspired by Wizards of the Coast's official <a href="https://magic.wizards.com/en/products/companion-app" target="_blank" rel="noreferrer">MTG Companion App</a> - go check it out!</p>
     </section>
     </AnimatedLayout>
   );

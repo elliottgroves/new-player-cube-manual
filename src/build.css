@@ -10,6 +10,7 @@
   align-items: center;
   column-gap: 1rem;
   padding: 0.5rem 1rem;
+  transform: translate3d(0,0,0);
 }
 .build-page .colors-list .colors-list-color h3 {
   margin: 0;
