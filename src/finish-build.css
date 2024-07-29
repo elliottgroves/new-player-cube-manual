@@ -1,6 +1,6 @@
 .deck-ratio-explainer {
   display: flex;
-  max-width: 450px;
+  max-width: var(--col-sm-width);
   margin: auto;
   gap: 0.25rem;
   justify-content: space-around;

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { ArrowRight, Scroll, Hammer, Crown } from '@phosphor-icons/react';
 import AnimatedLayout from './animatedlayout.js';
 import './home.css';
 import logo from './placeholder-logo.svg';
@@ -95,25 +96,26 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
+      <p className="hero-subtitle">Welcome to the online manual for the <i>Magic: the Gathering</i> <b>Welcome Cube</b>.</p>
       <section className="home-nav-buttons">
         <Link to="/welcome">
-          <motion.button whileTap={{ scale: 0.8 }} className="large-nav-button">
-            <span>Get Started</span>
-          </motion.button>
-        </Link>
-        <Link to="/build">
-          <button className="large-nav-button">
-            <span>Build your deck</span>
-          </button>
-        </Link>
-        <Link to="/tutorial">
-          <button className="large-nav-button">
-            <span>How to play</span>
+          <button className="cta-button large-nav-button">
+            <span>Get started</span><ArrowRight className="inline-icon" />
           </button>
         </Link>
         <Link to="/cheat-sheet">
           <button className="large-nav-button">
-            <span>Turn cheat sheet</span>
+            <span>Turn cheat sheet</span><Scroll className="inline-icon" />
+          </button>
+        </Link>
+        <Link to="/build">
+          <button className="large-nav-button">
+            <span>Build your deck</span><Hammer className="inline-icon" />
+          </button>
+        </Link>
+        <Link to="/tutorial">
+          <button className="large-nav-button">
+            <span>How to play</span><Crown className="inline-icon" />
           </button>
         </Link>
       </section>

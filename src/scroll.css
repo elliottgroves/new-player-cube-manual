@@ -8,7 +8,7 @@
   display: grid;
   grid-template-rows: auto 0fr;
   transition: grid-template-rows 0.5s ease;
-  max-width: 450px;
+  max-width: var(--col-sm-width);
   margin: 0 auto 2rem auto;
 }
 

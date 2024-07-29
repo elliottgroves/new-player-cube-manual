@@ -45,7 +45,7 @@ function Layout() {
 
   return (
     <div className="main-layout">
-      <ScrollTracker />
+    {/*<ScrollTracker />*/}
       <nav className="main-nav">
         <div className="main-nav-content">
           <Link to="/" className="home-logo-link">

@@ -38,9 +38,9 @@ export default function InstantsPage() {
   
         <p>When your opponent casts a spell, it starts off <b>on the stack</b> so you get a chance to respond to it. If you have Cancel in hand and the lands to cast it untapped, you can say <b>"in response"</b> and cast your Cancel. If your opponent has no responses, the stack resolves from top to bottom - Cancel counters the creature spell so it goes from the stack to the graveyard, then the stack is empty and you continue play.</p>
 
-        <p>The final relevant rule is <b>priority</b>. Whosever turn it is gets the first chance to act at each step. If you have an instant you would like to cast on your opponent's turn, you have to wait until they play a card first, or say that they're moving to the next step.</p> 
+        <p>The final relevant rule is <b>priority</b>. Whosever turn it is gets the first chance to act at each step. If you have an instant you would like to cast on your opponent's turn, you have to wait until they play a card first or until they say that they're moving to the next step.</p> 
 
-        <p>For example, let's say you have an instant that can tap an opponent's creature, and you would like to tap that creature before it attacks during their turn. Once your opponent says they're going to combat, you get a chance to stop them and cast your instant:</p>
+        <p>For example, let's say you have an instant that can tap an opponent's creature, and you would like to tap that creature before it attacks during their turn. Once your opponent says they're going to combat, you get a window to stop them and cast your instant:</p>
   
         <q>Hold on, before declare attackers, I have a spell to cast.</q>
   

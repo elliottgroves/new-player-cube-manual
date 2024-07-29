@@ -11,7 +11,7 @@ export default function WelcomePage() {
     return {
       initial: { rotateY: -90, transformPerspective: 800 },
       whileInView: { rotateY: 0, transformPerspective: 800 },
-      viewport: { once: true, margin: '-150px' },
+      viewport: { once: true, margin: '-300px 0px 0px 0px', amount: 'all' },
       transition: { duration: 0.4, easing: 'easeOut' }
     }
   }

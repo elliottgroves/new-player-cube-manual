@@ -1,6 +1,7 @@
 .home-layout {
   display: grid;
-  grid-template-rows: 60svh 1fr;
+  grid-template-rows: 50vh 1fr;
+  grid-template-rows: 50svh 1fr;
 }
 
 .home-layout .hero {
@@ -9,11 +10,20 @@
   background: radial-gradient(gold, transparent 70%);
 }
 
-.home-layout .hero .large-nav-button {
-  font-size: 3rem;
+.home-layout .hero-subtitle {
+  font-size: 1.1em;
+  max-width: fit-content;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  margin: 1rem auto 2rem auto;
 }
+
 .home-layout .home-nav-buttons {
-  padding: 0 2rem;
+  padding: 0 1rem;
+  max-width: var(--col-sm-width);
+  margin: auto;
 }
 
 .home-nav-buttons .large-nav-button {
@@ -27,6 +37,12 @@
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
+}
+
+.home-layout .home-nav-buttons .cta-button {
+  background-image: radial-gradient(100% 100% at 100% 0, lightgreen 0, var(--confirm-color) 100%);
+  font-size: 2.5rem;
+  margin-bottom: 6rem;
 }
 
 .hero-cards {
@@ -52,4 +68,16 @@
 .hero-card img {
   width: 30%;
   height: auto;
+}
+@media only screen and (min-width: 768px) {
+  .hero-cards {
+    width: 160px;
+  }
+  .hero-card {
+    width: 240px;
+  }
+  .home-layout .hero-subtitle {
+    padding: 1rem 10%;
+    background: linear-gradient(90deg, transparent, var(--primary-color) 10%, var(--primary-color) 90%, transparent);
+  }
 }

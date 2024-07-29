@@ -43,7 +43,7 @@
 
 .cheat-sheet .steps-and-phases, .cheat-sheet .color-key, .cheat-sheet .combat-tips {
   margin: 1rem auto 1rem auto;
-  max-width: 450px;
+  max-width: var(--col-sm-width);
 }
 .cheat-sheet .steps-and-phases li {
   display: flex;
