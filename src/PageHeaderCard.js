@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import BraveKinDuo from './images/Brave-Kin Duo Art.webp';
-import './relative-nav.css';
+import './page-header-card.css';
 
-export default function RelativeNavHeader({ pageTitle, previousLinkPath, previousTitle, nextLinkPath, nextTitle, iconFunction, artCardScryfallId }) {
+export default function PageHeaderCard({ pageTitle, iconFunction, artCardScryfallId }) {
   const [name, setName] = useState('Brave-Kin Duo');
   const [artist, setArtist] = useState('Devin Platts');
   const [imageSrc, setImageSrc] = useState('');
@@ -25,25 +25,12 @@ export default function RelativeNavHeader({ pageTitle, previousLinkPath, previou
   const icon = iconFunction ? iconFunction() : '';
 
   return (
-    <header className="relative-nav-header">
-      <figure className="relative-nav-header-card">
-        <h2 className="relative-nav-title"><span>{ pageTitle }</span>{icon}</h2>
-        <img className="relative-nav-image" src={ imageSrc }/>
-        <figcaption className="relative-nav-subheader"><span>{ name } by { artist }</span></figcaption>
+    <header className="page-header">
+      <figure className="page-header-card">
+        <h2 className="page-header-card-title"><span>{pageTitle}</span>{icon}</h2>
+        <img className="page-header-card-image" src={imageSrc}/>
+        <figcaption className="page-header-card-subtitle"><span>{name} by {artist}</span></figcaption>
       </figure>
     </header>
   );
 }
-
-//       <ul>
-//        <li>
-//          <Link to={ previousLinkPath }>
-//            <button>{previousTitle}</button>
-//          </Link>
-//        </li>
-//        <li>
-//          <Link to={ nextLinkPath }>
-//            <button>{nextTitle}</button>
-//          </Link>
-//        </li>
-//      </ul>

@@ -1,0 +1,94 @@
+.instants-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: var(--desktop-width);
+  margin: auto;
+  justify-content: center;
+}
+
+.stack-explainer {
+  display: flex;
+  flex-flow: column;
+}
+.stack-explainer .stacks {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.stack-explainer .spell {
+  box-shadow: 0 0 6px #0008;
+  border: 4px solid black;
+  border-radius: 8px;
+}
+
+.stack-explainer .stacks .stack-horizontal .stack-visual {
+  display: flex;
+  padding: 3rem 0;
+}
+.stack-explainer .stack-horizontal .spell {
+  aspect-ratio: 5 / 7;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.stack-explainer .stack-horizontal .spell svg {
+  margin-bottom: 0.5rem;
+}
+.stack-explainer .one {
+  background: var(--primary-color);
+  color: var(--accent-color);
+}
+.stack-explainer .two {
+  background: var(--button-color);
+  color: var(--bg-color);
+}
+.stack-explainer .three {
+  background: var(--instants-color);
+}
+.stack-explainer .stack-horizontal .one, .stack-explainer .stack-horizontal .three {
+  transform: translateY(2rem);
+}
+.stack-explainer .stack-horizontal  .two {
+  transform: translateY(-2rem);
+  margin: 0 -1rem;
+}
+
+.stack-explainer .stack-vertical .stack-visual {
+  display: flex;
+  flex-flow: column-reverse;
+  overflow: visible;
+}
+.stack-explainer .stack-vertical .spell {
+  aspect-ratio: 1 / 1;
+  width: 100px;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg) rotateZ(45deg);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  backface-visibility: hidden;
+}
+.stack-explainer .stack-vertical .spell span {
+  overflow: visible;
+  transform-style: preserve-3d;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+.stack-explainer .stack-vertical .one {
+  z-index: 2;
+}
+.stack-explainer .stack-vertical .two {
+  z-index: 3;
+  margin: -3rem 0;
+}
+.stack-explainer .stack-vertical .three {
+  z-index: 4;
+}
+
+
+.stack-explainer figcaption {
+  color: var(--text-color-alt);
+}

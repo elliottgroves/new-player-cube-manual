@@ -1,9 +1,9 @@
+import './home-page.css';
+import AnimatedLayout from './AnimatedLayout.js';
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { ArrowRight, Scroll, Hammer, Crown } from '@phosphor-icons/react';
-import AnimatedLayout from './animatedlayout.js';
-import './home.css';
-import logo from './placeholder-logo.svg';
+import logo from './images/logo.svg';
 
 const layoutVariants = {
   initial: {

@@ -1,38 +1,41 @@
-import './App.css';
-import logo from './placeholder-logo.svg';
-import Home from './home.js';
-import Welcome from './welcome.js';
-import Build from './build.js';
-import GridSetup from './grid-setup.js';
-import DraftSetup from './draft-setup.js';
-import FinishBuild from './finish-build.js';
-import Tutorial from './tutorial.js';
-import Instants from './instants.js';
-import CheatSheet from './cheat-sheet.js';
-import { Routes, Route, Outlet, Link, useOutlet, useLocation } from 'react-router-dom';
-import { animate, stagger } from 'motion';
-import { AnimatePresence, motion } from 'framer-motion';
+import './app.css';
+
 import { cloneElement } from 'react';
-import AnimatedLayout from './animatedlayout.js';
-import ScrollTracker from './ScrollTracker.js';
-import RelativeNavHeader from './relative-nav.js';
+import { Routes, Route, Outlet, Link, useOutlet, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Scroll } from '@phosphor-icons/react';
+
+import HomePage from './HomePage.js';
+import WelcomePage from './WelcomePage.js';
+import BuildPage from './BuildPage.js';
+import GridSetupPage from './GridSetupPage.js';
+import DraftSetupPage from './DraftSetupPage.js';
+import FinishBuildPage from './FinishBuildPage.js';
+import TutorialPage from './TutorialPage.js';
+import InstantsPage from './InstantsPage.js';
+import CheatSheetPage from './CheatSheetPage.js';
+
+import AnimatedLayout from './AnimatedLayout.js';
+import PageHeaderCard from './PageHeaderCard.js';
+import ProgressTracker from './ProgressTracker.js';
+
+import logo from './images/logo.svg';
 
 export default function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="welcome" element={<Welcome />} />
-          <Route path="build" element={<Build />} />
-          <Route path="grid-setup" element={<GridSetup />} />
-          <Route path="draft-setup" element={<DraftSetup />} />
-          <Route path="finish-build" element={<FinishBuild />} />
-          <Route path="tutorial" element={<Tutorial />} />
-          <Route path="instants" element={<Instants />} />
-          <Route path="cheat-sheet" element={<CheatSheet />} />
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="welcome" element={<WelcomePage />} />
+          <Route path="build" element={<BuildPage />} />
+          <Route path="grid-setup" element={<GridSetupPage />} />
+          <Route path="draft-setup" element={<DraftSetupPage />} />
+          <Route path="finish-build" element={<FinishBuildPage />} />
+          <Route path="tutorial" element={<TutorialPage />} />
+          <Route path="instants" element={<InstantsPage />} />
+          <Route path="cheat-sheet" element={<CheatSheetPage />} />
         </Route>
       </Routes>
     </>
@@ -102,16 +105,12 @@ function Layout() {
   );
 }
 
-function About() {
+function AboutPage() {
   return (
     <AnimatedLayout>
       <section>
-        <RelativeNavHeader
+        <PageHeaderCard
           pageTitle="About"
-          previousLinkPath="/build"
-          previousTitle="Back"
-          nextLinkPath="/"
-          nextTitle="Next"
           iconFunction={() => <Scroll />}
           artCardScryfallId="34e61e0f-d0f3-492a-92f1-36f72a91583a"
         />

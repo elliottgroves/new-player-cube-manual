@@ -1,4 +1,4 @@
-.scroll {
+.collapsible-scroll {
   width: 100%;
   background-color: var(--bg-color);
   position: relative;
@@ -12,11 +12,11 @@
   margin: 0 auto 2rem auto;
 }
 
-.scroll.open {
+.collapsible-scroll.open {
   grid-template-rows: auto 1fr;
 }
 
-.scroll::after {
+.collapsible-scroll::after {
   box-shadow: 0 0px 8px 2px #4443;
   content: "(tap to expand)";
   display: flex;
@@ -30,18 +30,18 @@
   background: linear-gradient(#4443, transparent 40%, transparent 60%, #4443);
 }
 
-.scroll .content {
+.collapsible-scroll .content {
   padding: 0 1rem;
   overflow: hidden;
   color: var(--text-color);
   background: #FFF0CC;
 }
 
-.scroll .content hr {
+.collapsible-scroll .content hr {
   margin: 0;
 }
 
-.scroll .title {
+.collapsible-scroll .title {
   padding: 0.5rem 1rem;
   margin: 0;
   font-size: 1.3rem;

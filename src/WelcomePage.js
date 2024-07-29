@@ -1,9 +1,9 @@
-import './welcome.css';
-import RelativeNavHeader from './relative-nav.js';
-import AnimatedLayout from './animatedlayout.js';
+import './welcome-page.css';
+import AnimatedLayout from './AnimatedLayout.js';
+import PageHeaderCard from './PageHeaderCard.js';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { HandWaving } from '@phosphor-icons/react';
+import { HandWaving, Hammer } from '@phosphor-icons/react';
 import CentaurCourser from './images/Centaur Courser.webp';
 
 export default function WelcomePage() {
@@ -19,12 +19,8 @@ export default function WelcomePage() {
   return (
     <AnimatedLayout>
       <section className="welcome-page">
-        <RelativeNavHeader
+        <PageHeaderCard
           pageTitle="Welcome!"
-          previousLinkPath="/"
-          previousTitle="Back"
-          nextLinkPath="/build"
-          nextTitle="Next"
           iconFunction={() => <HandWaving />}
           artCardScryfallId="0438d482-b74c-4d5e-a2bc-7063c1ae73fa"
         />
@@ -50,7 +46,7 @@ export default function WelcomePage() {
         <p>Now that we know what to expect, let's build some decks and play some games.</p>
 
         <Link to="/build">
-          <button className="large-nav-button">Build my deck</button>
+          <button className="large-nav-button">Build my deck<Hammer className="inline-icon"/></button>
         </Link>
       </section>
     </AnimatedLayout>

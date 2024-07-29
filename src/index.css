@@ -8,8 +8,10 @@
   --button-color: #ffa633;
   --button-text-color: white;
   --link-color: #5CCAFF;
+  --instants-color: lightblue;
   --visited-link-color: #1D8CCE;
   --col-sm-width: 450px;
+  --desktop-width: 768px;
 }
 
 html, body {

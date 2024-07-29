@@ -1,18 +1,18 @@
-.relative-nav-header {
+.page-header {
   width: min(100%, 500px);
   margin: 0 auto;
   padding-top: 1em;
   display: block;
 }
 
-.relative-nav-header ul {
+.page-header ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   padding: 0;
 }
 
-.relative-nav-header-card {
+.page-header .page-header-card {
   width: calc(100% - 2.5rem);
   padding: 0.5rem 0.25rem 1rem 0.25rem;
   margin: 0;
@@ -24,8 +24,8 @@
   background-clip: padding-box, border-box;
 }
 
-.relative-nav-header .relative-nav-title,
-.relative-nav-header .relative-nav-subheader {
+.page-header-card .page-header-card-title,
+.page-header-card .page-header-card-subtitle {
   background: #faebd7;
   padding: 0.25rem 0.75rem;
   border-radius: 0.75rem;
@@ -37,14 +37,14 @@
   margin: 0;
 }
 
-.relative-nav-header .relative-nav-subheader {
+.page-header-card .page-header-card-subtitle {
   color: #555;
   border-width: 1px;
   font-size: 0.7rem;
   justify-content: center;
 }
 
-.relative-nav-header .relative-nav-image {
+.page-header-card .page-header-card-image {
   display: block;
   background: linear-gradient(-45deg, #fff8, #aaa6, #fff8);
   width: calc(100% - 1rem);
