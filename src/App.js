@@ -45,42 +45,58 @@ export default function App() {
 function Layout() {
   const { pathname } = useLocation();
   const element = useOutlet();
+  let mainNavModifier = '';
+  
+  if (pathname === '/') {
+    mainNavModifier = ' home';
+  }
+
+  const progressPathnameOrder = ['/welcome', '/build', '/grid-setup', '/finish-build', '/tutorial'];
+  const prog = progressPathnameOrder.findIndex(el => el === pathname);
+  
+  const classNameForProgress = (progressThreshold) => {
+    if (prog === progressThreshold) {
+      return 'active';
+    } else {
+      return prog > progressThreshold ? 'completed' : '';
+    }
+  }
 
   return (
     <div className="main-layout">
       <ProgressTracker />
-      <nav className="main-nav">
+      <nav className={'main-nav' + mainNavModifier}>
         <div className="main-nav-content">
           <Link to="/" className="home-logo-link">
             <img src={logo} className="logo" />
             <h1 className="">Welcome Cube</h1>
           </Link>
           <ul className="links">
-            <li>
+            <li className={classNameForProgress(0)}>
               <Link to="/welcome">
                 <HandWaving />
                 <span>Start</span>
               </Link>
             </li>
-            <li>
+            <li className={classNameForProgress(1)}>
               <Link to="/build">
                 <Hammer />
                 <span>Build</span>
               </Link>
             </li>
-            <li>
+            <li className={classNameForProgress(2)}>
               <Link to="/grid-setup">
                 <GridNine />
                 <span>Draft</span>
               </Link>
             </li>
-            <li>
+            <li className={classNameForProgress(3)}>
               <Link to="/finish-build">
                 <SealCheck />
                 <span>Finish</span>
               </Link>
             </li>
-            <li>
+            <li className={classNameForProgress(4)}>
               <Link to="/tutorial">
                 <Crown />
                 <span>Play</span>
@@ -138,7 +154,7 @@ function AboutPage() {
           artCardScryfallId="34e61e0f-d0f3-492a-92f1-36f72a91583a"
         />
         
-        <p>Welcome Cube is a passion project that started in 2020.</p>
+        <p>The Welcome Cube is a passion project that started in 2020. I had been playing <i>Magic</i> for many </p>
 
         <p>Cube is a way to play <i>Magic</i>. You can find the current list of all the cards in the Welcome Cube <a href="https://cubecobra.com/cube/list/welcome-cube" target="_blank" rel="noreferrer">here</a>. (Also, if you're curious, <a href="https://cubecobra.com/" target="_blank" rel="noreferrer">Cube Cobra</a> is a wonderful site that hosts cube lists - great place to browse cards!)</p>
         

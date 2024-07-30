@@ -20,8 +20,8 @@
   justify-content: space-between;
   border-radius: 1rem;
   background: var(--primary-color);
+  padding: 0.5rem 1rem;
   margin: 0.5rem;
-  padding: 0 1rem;
   flex-grow: 1;
   box-shadow: 0 2px 5px #0004;
 }
@@ -31,6 +31,13 @@
   align-items: center;
   text-decoration: none;
   color: var(--bg-color);
+}
+.main-nav .home-logo-link h1 {
+  margin: 0;
+  display: none;
+}
+.main-nav.home .home-logo-link h1 {
+  display: block;
 }
 
 .main-nav .home-logo-link:visited {
@@ -51,6 +58,9 @@
   gap: 1rem;
   padding: 0;
 }
+.main-nav.home .links {
+  display: none;
+}
 
 .main-nav .links li {
   display: flex;
@@ -63,10 +73,19 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.main-nav .links li.completed a {
+  color: var(--confirm-color);
+}
+.main-nav .links li.active a {
+  color: var(--accent-color);
 }
 
 .main-nav .links li a svg {
-  width: 2rem;
+  width: 1.75rem;
   height: auto;
   margin-right: 0.25rem;
 }
@@ -285,11 +304,18 @@ svg.inline-icon {
   .main-nav .main-nav-content {
     margin: 0.5rem 1rem;
   }
-
+  .main-nav .home-logo-link h1 {
+    display: block;
+  }
+  .main-nav.home .links {
+    display: flex;
+  }
+  .main-nav .links li a svg {
+    width: 1.5rem;
+  }
   .main-nav .links li a span {
     display: inline;
   }
-
   .main-nav ul {
     display: flex;
   }

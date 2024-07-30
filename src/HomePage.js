@@ -2,7 +2,7 @@ import './home-page.css';
 import AnimatedLayout from './AnimatedLayout.js';
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { ArrowRight, Scroll, Hammer, Crown } from '@phosphor-icons/react';
+import { HandWaving, Scroll, Hammer, Crown } from '@phosphor-icons/react';
 import logo from './images/logo.svg';
 
 const layoutVariants = {
@@ -100,7 +100,7 @@ export default function Home() {
       <section className="home-nav-buttons">
         <Link to="/welcome">
           <button className="cta-button large-nav-button">
-            <span>Get started</span><ArrowRight className="inline-icon" />
+            <span>Get started</span><HandWaving className="inline-icon" />
           </button>
         </Link>
         <Link to="/cheat-sheet">
