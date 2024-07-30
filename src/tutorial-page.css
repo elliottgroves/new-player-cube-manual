@@ -1,29 +1,70 @@
-p img {
-  display: inline;
-  height: 22px;
-  vertical-align: middle;
-  margin-bottom: 1px;
+.tutorial-page .tip, .tutorial-page .tutorial-list {
+  background: var(--bg-color);
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 0 5px #0004;
+}
+.tutorial-page .note {
+  color: var(--text-color-alt);
 }
 
-.centaur-courser {
-  width: 100%;
-  aspect-ratio: 6.5/1;
-  object-fit: cover;
-  object-position: 0% 0%;
-  border-radius: 18px 18px 0 0;
-  max-width: 400px;
-  display: block;
-  margin: auto;
+.tutorial-page .tutorial-list {
+  margin-bottom: 2rem;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+.tutorial-page .tutorial-list li {
+  padding: 0.25rem 0;
 }
 
-.main-phase-section {
-  background: linear-gradient(lightblue, transparent 400px);
+.tutorial-page .tap-explainer, .tutorial-page .block-explainer, .tutorial-page .card-figure {
+  margin: 0 auto;
+  max-width: var(--col-sm-width);
+}
+.tutorial-page .tap-explainer .tap-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.tutorial-page .tap-explainer .tap-diagram .card, .tutorial-page .block-explainer .card {
+  background: var(--confirm-color);
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tutorial-page .tap-explainer .tap-diagram .untapped, .tutorial-page .block-explainer .blocker {
+  width: 80px;
+  aspect-ratio: 5 / 7;
+  flex-shrink: 0;
+}
+.tutorial-page .tap-explainer .tap-diagram .tapped, .tutorial-page .block-explainer .attacker {
+  height: 80px;
+  aspect-ratio: 7 / 5;
+  flex-shrink: 0;
+}
+.tutorial-page .tap-explainer .tap-diagram img {
+  width: 50px;
+}
+.tutorial-page .tap-explainer figcaption, .tutorial-page .block-explainer figcaption, .tutorial-page .card-figure figcaption {
+  text-align: center;
+  color: var(--text-color-alt);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
-.combat-section {
-  background: linear-gradient(red, transparent 400px);
+.tutorial-page .block-explainer .block-diagram {
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: center;
 }
-
-.instant-cards-section {
-  background: linear-gradient(yellow, transparent 400px);
+.tutorial-page .block-explainer .attacker {
+  background: var(--primary-color);
+  color: var(--accent-color);
+}
+.tutorial-page .block-explainer .blocker {
+  background: var(--blocker-color);
+  color: var(--accent-color);
+  margin-bottom: -1rem;
 }

@@ -2,25 +2,26 @@ import './cheat-sheet-page.css';
 import AnimatedLayout from './AnimatedLayout.js';
 import { Link } from 'react-router-dom';
 import { ArrowBendRightDown, Info, DotOutline, Crown, Lightning } from '@phosphor-icons/react';
+import t from './icons/t.svg';
 
 export default function CheatSheetPage() {
   return (
     <AnimatedLayout>
-      <section className="cheat-sheet">
-        <div className="color-key">
+      <figure className="cheat-sheet">
+        <figcaption className="color-key">
           <p>
-            <div className="color sorceries"></div>
+            <span className="color sorceries"/>
             <span>Can cast <b>creatures, sorceries, instants</b></span>
           </p>
           <p>
-            <div className="color instants"></div>
+            <span className="color instants"/>
             <span>Can <i>only</i> cast <b>instant</b> spells</span>
           </p>
           <p>
-            <div className="color none"></div>
+            <span className="color none"/>
             <span>Can't cast spells</span>
           </p>
-        </div>
+        </figcaption>
         
         <ul className="steps-and-phases">
           <li className="none">
@@ -57,23 +58,14 @@ export default function CheatSheetPage() {
         </ul>
   
         <div className="combat-tips">
-          <h3>Combat Tips</h3>
+          <h3>Combat Reminders</h3>
           <ul>
-            <li>
-              <DotOutline size={24}/><span>Creatures can't tap the turn you play them, so they also can't attack.</span>
-            </li>
-            <li>
-              <DotOutline size={24}/><span>You declare all your attackers at the same time. Tap a creature to attack with it.</span>
-            </li>
-            <li>
-              <DotOutline size={24}/><span>The defending player can block your attackers with their untapped creatures.</span>
-            </li>
-            <li>
-              <DotOutline size={24}/><span>Multiple creatures can block one attacker. The attacking player picks the order the blockers take damage.</span>
-            </li>
-            <li>
-              <DotOutline size={24}/><span>A creature that takes more damage than its toughness in one turn dies and is put in the graveyard.</span>
-            </li>
+            <li>Creatures played this turn have <i>summoning sickness</i> and can't attack or activate <img src={t} className="symbol"/> tap abilities until your next turn</li>
+            <li>Declare all attacking creatures at the same time by tapping them</li>
+            <li>The defending player can block attacking creatures with their untapped creatures</li>
+            <li>Blocked attackers fight their blockers, unblocked creatures damage the defending player</li>
+            <li>A creature that takes more damage than its toughness in one turn dies and is put in the graveyard</li>
+            <li>Multiple creatures can block one attacker - the attacking player picks the order the blockers take damage</li>
           </ul>
         </div>
   
@@ -85,7 +77,7 @@ export default function CheatSheetPage() {
         <Link to="/instants">
           <button className="large-nav-button">Detailed instants rules<Lightning className="inline-icon" /></button>
         </Link>
-      </section>
+      </figure>
     </AnimatedLayout>
   );
 }

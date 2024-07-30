@@ -41,8 +41,8 @@ export default function BuildPage() {
           </figure>
         </div>
         
-        <p>It's also a good idea to tend towards cards with lower mana costs, having mostly cards that cost 2-4 mana. You can figure out how much total mana a card costs by adding the number of colored mana symbols <span className="inline-no-wrap">(<img src={r}/>)</span> to the other number <span className="inline-no-wrap">(<img src={two} />)</span>.</p>
-      <p>The number in the gray circle means you can spend mana of any color when paying for that part of the mana cost. For example, <span className="inline-no-wrap"><img src={two}/><img src={r}/><img src={r}/></span> means a card costs <b>four mana</b> total: <b>two mana of any color</b> and <b>two red mana</b>.</p> 
+        <p>It's also a good idea to tend towards cards with lower mana costs, having mostly cards that cost 2-4 mana. You can figure out how much total mana a card costs by adding the number of colored mana symbols <span className="inline-no-wrap">(<img src={r} className="symbol"/>)</span> to the other number <span className="inline-no-wrap">(<img src={two} className="symbol"/>)</span>.</p>
+      <p>The number in the gray circle means you can spend mana of any color when paying for that part of the mana cost. For example, <span className="inline-no-wrap"><img src={two} className="symbol"/><img src={r} className="symbol"/><img src={r} className="symbol"/></span> means a card costs <b>four mana</b> total: <b>two mana of any color</b> and <b>two red mana</b>.</p> 
   
         <CollapsibleScroll title={'Need help choosing?'}>
           <p>The <i>Magic</i> community has an acronym to help evaluate which cards are best in a draft:</p>

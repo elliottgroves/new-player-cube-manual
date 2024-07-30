@@ -102,7 +102,6 @@
 
 .cheat-sheet .combat-tips h3 {
   margin: 0;
-  margin-bottom: 0.5rem;
   padding: 0.5rem 0;
   display: flex;
   align-items: center;
@@ -111,13 +110,10 @@
   background: var(--accent-color);
 }
 .cheat-sheet .combat-tips ul {
-  padding-right: 0.5rem;
+  padding: 0.5rem;
+  list-style-type: circle;
+  list-style-position: inside;
 }
 .cheat-sheet .combat-tips li {
-  display: flex;
-  align-items: flex-start;
   margin-bottom: 0.5rem;
-}
-.cheat-sheet .combat-tips li svg {
-  flex-shrink: 0;
 }

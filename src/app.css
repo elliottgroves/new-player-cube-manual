@@ -248,6 +248,11 @@ svg.inline-icon {
   vertical-align: middle;
   margin-right: 0.25rem;
 }
+.symbol {
+  display: inline;
+  height: 1.2em;
+  vertical-align: middle;
+}
 
 .two-colors-reminder {
   background: var(--primary-color);

@@ -31,11 +31,12 @@
 }
 
 .inline-no-wrap {
+  height: 100%;
   display: inline-flex;
   flex-wrap: nowrap;
-  vertical-align: middle;
+  align-items: center;
+  vertical-align: top;
 }
-  
 
 .bread-explainer {
   background: #f0d1a0;
