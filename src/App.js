@@ -3,7 +3,7 @@ import './app.css';
 import { cloneElement } from 'react';
 import { Routes, Route, Outlet, Link, useOutlet, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Scroll } from '@phosphor-icons/react';
+import { HandWaving, Hammer, GridNine, SealCheck, Crown, Scroll} from '@phosphor-icons/react';
 
 import HomePage from './HomePage.js';
 import WelcomePage from './WelcomePage.js';
@@ -43,25 +43,48 @@ export default function App() {
 }
 
 function Layout() {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const element = useOutlet();
 
   return (
     <div className="main-layout">
-    {/*<ScrollTracker />*/}
+      <ProgressTracker />
       <nav className="main-nav">
         <div className="main-nav-content">
           <Link to="/" className="home-logo-link">
             <img src={logo} className="logo" />
-            <h1>Welcome Cube</h1>
+            <h1 className="">Welcome Cube</h1>
           </Link>
-  
-          <ul>
+          <ul className="links">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/welcome">
+                <HandWaving />
+                <span>Start</span>
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/build">
+                <Hammer />
+                <span>Build</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/grid-setup">
+                <GridNine />
+                <span>Draft</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/finish-build">
+                <SealCheck />
+                <span>Finish</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/tutorial">
+                <Crown />
+                <span>Play</span>
+              </Link>
             </li>
           </ul>
         </div>
@@ -69,7 +92,7 @@ function Layout() {
 
       <main className="main-content">
         <AnimatePresence mode="wait" initial={true}>
-          { element && cloneElement(element, { key: location.pathname })}
+          { element && cloneElement(element, { key: pathname })}
         </AnimatePresence>
       </main>
 

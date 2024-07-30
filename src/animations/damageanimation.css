@@ -44,7 +44,7 @@ figcaption {
   padding-top: 1rem;
 }
 
-@media only screen and (min-width: var(--desktop-width)) {
+@media only screen and (min-width: 768px) {
   .damage-animation .explainer-container .damage-labels {
     margin-top: 1.9rem;
   }

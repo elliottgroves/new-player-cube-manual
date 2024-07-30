@@ -65,7 +65,7 @@
   left: 50%;
 }
 
-@media only screen and (min-width: var(--desktop-width)) {
+@media only screen and (min-width: 768px) {
   .attack-animation .lands {
     height: 200px;
   }

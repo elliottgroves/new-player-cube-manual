@@ -14,7 +14,8 @@
 .stack-explainer .stacks {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 0 4rem;
+  flex-wrap: wrap;
 }
 .stack-explainer .spell {
   box-shadow: 0 0 6px #0008;

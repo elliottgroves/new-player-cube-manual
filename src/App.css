@@ -5,20 +5,23 @@
 }
 
 .main-nav {
+  display: flex;
   align-items: center;
+  width: 100%;
   z-index: 10;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  width: 100%;
 }
 
 .main-nav-content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-radius: 1rem;
   background: var(--primary-color);
   margin: 0.5rem;
+  padding: 0 1rem;
   flex-grow: 1;
   box-shadow: 0 2px 5px #0004;
 }
@@ -34,18 +37,41 @@
   color: var(--bg-color);
 }
 
-.main-nav ul {
+.main-nav .logo {
+  height: 3rem;
+  aspect-ratio: 1 / 1;
+  margin-right: 0.5rem;
+}
+
+.main-nav .links {
   margin-left: 1rem;
-  display: none;
-  list-style: none;
-  gap: 1rem;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
   padding: 0;
 }
 
-.main-nav .logo {
-  height: 3.5rem;
-  margin: 0 0.5rem;
+.main-nav .links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav .links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.main-nav .links li a svg {
+  width: 2rem;
+  height: auto;
+  margin-right: 0.25rem;
+}
+.main-nav .links li a span {
+  display: none;
 }
 
 .main-nav a {
@@ -255,9 +281,13 @@ svg.inline-icon {
   color: var(--text-color-alt);
 }
 
-@media only screen and (min-width: var(--desktop-width)) {
+@media only screen and (min-width: 768px) {
   .main-nav .main-nav-content {
     margin: 0.5rem 1rem;
+  }
+
+  .main-nav .links li a span {
+    display: inline;
   }
 
   .main-nav ul {
