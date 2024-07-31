@@ -14,7 +14,7 @@ export default function BuildPage() {
         <PageHeaderCard
           pageTitle="Finish your deck"
           iconFunction={() => <SealCheck />}
-          artCardScryfallId="b78e2bca-bc93-464a-8911-8361abff2ac6"
+          artCardScryfallId="f2a0e716-22b7-4a5e-9b7a-d4a806ee7427"
         />
   
         <p>Now that we have our cards, we need to build our deck. Let's start by grabbing all our cards that are our two colors. This includes gold cards that are both our colors and lands that add both our colors of mana.</p>
