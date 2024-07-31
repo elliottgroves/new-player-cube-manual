@@ -3,7 +3,7 @@ import AnimatedLayout from './AnimatedLayout.js';
 import PageHeaderCard from './PageHeaderCard.js';
 import CollapsibleScroll from './CollapsibleScroll.js';
 import { Link } from 'react-router-dom';
-import { Info, Sword, Shield, Crown, Lightning, Scroll } from '@phosphor-icons/react';
+import { Info, Sword, Mountains, Stack, Ghost, Shield, Crown, Lightning, Scroll } from '@phosphor-icons/react';
 import t from './icons/t.svg';
 
 export default function TutorialPage() {
@@ -33,12 +33,15 @@ export default function TutorialPage() {
         
         <p>Here's a guideline of what your board will look like as you play.</p>
         
-        <div className="board">
-          <div className="creatures">Creatures</div>
-          <div className="lands">Lands</div>
-          <div className="library">Library</div>
-          <div className="graveyard">Graveyard</div>
-        </div>
+        <figure className="board-explainer">
+          <div className="board-diagram">
+            <div className="creatures area"><Sword size={32}/>Creatures</div>
+            <div className="lands area"><Mountains size={32}/>Lands</div>
+            <div className="library area"><Stack size={32}/>Library</div>
+            <div className="graveyard area"><Ghost size={32}/>Graveyard</div>
+          </div>
+          <figcaption>Switch your library and graveyard to the left if that's more comfortable.</figcaption>
+        </figure>
 
         <p>Finally, try and announce everything you're doing to make sure it's clear to your opponent, and ask you're opponent if you're not sure what they're doing.</p>
 
@@ -62,13 +65,13 @@ export default function TutorialPage() {
 
         <ul className="tutorial-list">
           <li>Play a land <span className="note">(one each turn)</span></li>
-          <li><img src={t} className="symbol"/> <b>Tap</b> your lands for mana to cast spells <span className="note">(creatures, sorceries, or instants)</span></li>
+          <li><img src={t} alt="Tap symbol" className="symbol"/> <b>Tap</b> your lands for mana to cast spells <span className="note">(creatures, sorceries, or instants)</span></li>
         </ul>
         
         <figure className="tap-explainer">
           <div className="tap-diagram">
             <div className="card untapped"/>
-            <img src={t}/>
+            <img src={t} alt="Tap symbol" />
             <div className="card tapped"/>
           </div>
           <figcaption>Tap a card by turning it sideways, showing that you've used it this turn.</figcaption>
@@ -76,7 +79,7 @@ export default function TutorialPage() {
 
         <p>When you cast a sorcery spell or an instant spell, its effect happens, then it goes to the graveyard.</p> 
 
-        <p>Creature spells you cast become creatures on the battlefield. The turn a creature enters the battlefield, it has <b>summoning sickness</b> and can't attack or <img src={t} className="symbol"/> tap to activate abilities yet.</p>
+        <p>Creature spells you cast become creatures on the battlefield. The turn a creature enters the battlefield, it has <b>summoning sickness</b> and can't attack or <img src={t} alt="Tap symbol" className="symbol"/> tap to activate abilities yet.</p>
 
         <p>The majority of <i>Magic</i> games are won by attacking your opponent with your creatures. You do this in the Combat Phase - move to the Combat Phase during your first main by saying so:</p>
         
@@ -151,7 +154,7 @@ export default function TutorialPage() {
 
         <p>Giant Growth can turn a tiny 1/1 into a powerful 4/4 and have it live through or deal crucial damage! Instants during combat can completely change the tide of battle.</p>
 
-        <p>You can also cast instants <b>"in response"</b> to other spells. If you want to master all the rules of instants, check out the rules below. For your first games, don't sweat it too much.</p>
+        <p>You can also cast instants <b>"in response"</b> to other spells, meaning they happen before the other spell does. If you want to master all the rules of instants, check out the guide below. For your first games, don't sweat it too much.</p>
         
         <Link to="/instants">
           <button className="large-nav-button">Instants Rules<Lightning className="inline-icon" /></button>

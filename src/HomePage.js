@@ -1,5 +1,4 @@
 import './home-page.css';
-import AnimatedLayout from './AnimatedLayout.js';
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { HandWaving, Scroll, Hammer, Crown } from '@phosphor-icons/react';
@@ -91,7 +90,7 @@ export default function Home() {
             <motion.div {...cardAnimation(-80)} className="hero-card three"></motion.div>
             <motion.div {...cardAnimation(-40)} className="hero-card four"></motion.div>
             <motion.div className="hero-card five">
-              <img draggable="false" src={logo} className="logo" />
+              <img draggable="false" src={logo} alt="Welcome Cube logo" className="logo" />
             </motion.div>
           </motion.div>
         </motion.div>

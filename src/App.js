@@ -1,8 +1,8 @@
 import './app.css';
 
 import { cloneElement } from 'react';
-import { Routes, Route, Outlet, Link, useOutlet, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { Routes, Route, Link, useOutlet, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import { HandWaving, Hammer, GridNine, SealCheck, Crown, Scroll} from '@phosphor-icons/react';
 
 import HomePage from './HomePage.js';
@@ -51,14 +51,14 @@ function Layout() {
     mainNavModifier = ' home';
   }
 
-  const progressPathnameOrder = ['/welcome', '/build', '/grid-setup', '/finish-build', '/tutorial'];
+  const progressPathnameOrder = ['/welcome', '/build', '/grid-setup', '/draft-setup', '/finish-build', '/tutorial'];
   const prog = progressPathnameOrder.findIndex(el => el === pathname);
   
   const classNameForProgress = (progressThreshold) => {
     if (prog === progressThreshold) {
       return 'active';
     } else {
-      return prog > progressThreshold ? 'completed' : '';
+      return prog >= progressThreshold && !(prog === 3 && progressThreshold === 2) ? 'completed' : '';
     }
   }
 
@@ -68,8 +68,8 @@ function Layout() {
       <nav className={'main-nav' + mainNavModifier}>
         <div className="main-nav-content">
           <Link to="/" className="home-logo-link">
-            <img src={logo} className="logo" />
-            <h1 className="">Welcome Cube</h1>
+            <img src={logo} alt="Welcome Cube logo" className="logo" />
+            <h1>Welcome Cube</h1>
           </Link>
           <ul className="links">
             <li className={classNameForProgress(0)}>
@@ -84,19 +84,19 @@ function Layout() {
                 <span>Build</span>
               </Link>
             </li>
-            <li className={classNameForProgress(2)}>
+            <li className={`${classNameForProgress(2)} ${classNameForProgress(3)}`}>
               <Link to="/grid-setup">
                 <GridNine />
                 <span>Draft</span>
               </Link>
             </li>
-            <li className={classNameForProgress(3)}>
+            <li className={classNameForProgress(4)}>
               <Link to="/finish-build">
                 <SealCheck />
                 <span>Finish</span>
               </Link>
             </li>
-            <li className={classNameForProgress(4)}>
+            <li className={classNameForProgress(5)}>
               <Link to="/tutorial">
                 <Crown />
                 <span>Play</span>
@@ -113,32 +113,56 @@ function Layout() {
       </main>
 
       <footer className="main-footer">
-        <img src={logo} className="logo" />
-        <h1>Welcome Cube</h1>
-        <div className="links-section">
-          <ul title="Pages">
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
+        <figure className="footer-logo">
+          <img src={logo} alt="Welcome Cube logo" className="logo" />
+          <figcaption><h1>Welcome Cube</h1></figcaption>
+        </figure>
+        <section className="links-section">
           <ul title="Jump to">
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/welcome">Welcome</Link>
+            </li>
+            <li>
+              <Link to="/build">Build</Link>
+            </li>
+            <li>
+              <Link to="/grid-setup">2 or 3 Player Setup</Link>
+            </li>
+            <li>
+              <Link to="/draft-setup">4+ Player Setup</Link>
+            </li>
+            <li>
+              <Link to="/finish-build">Finish Build</Link>
+            </li>
+            <li>
+              <Link to="/tutorial">How to Play</Link>
             </li>
           </ul>
-        </div>
-        <div className="info-section">
+          <ul title="Pages">
+            <li>
+              <Link to="/cheat-sheet">Cheat Sheet</Link>
+            </li>
+            <li>
+              <Link to="/instants">Instants Rules</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+          </ul>
+        </section>
+        <section className="info-section">
           <p>This site is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC.</p>
           <p>
             This site may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under <a href="https://company.wizards.com/en/legal/fancontentpolicy" target="_blank" rel="noreferrer">Wizards’ Fan Site Policy</a>. For example, Magic: The Gathering® is a trademark of Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards’ trademarks or other intellectual property, please visit their website at <a href="https://magic.wizards.com" target="_blank" rel="noreferrer">magic.wizards.com</a>. 
           </p>
-          <p>
-            This site also uses card images created on <a href="https://mtg.design" target="_blank" rel="noreferrer">MTG.Design</a> and card images from <a href="https://scryfall.com" target="_blank" rel="noreferrer">Scryfall</a>.
+          <p>This site also card images from <a href="https://scryfall.com" target="_blank" rel="noreferrer">Scryfall</a>.</p>
+          <p className="copyright-info">
+            Made with ❤️ by <a href="https://elliottgroves.dev" target="_blank" rel="noreferrer">Elliott Groves Design</a>
           </p>
-          <p>
-            Made with ❤️ by <a href="https://elliottgrov.es" target="_blank">Elliott Groves Design</a>
-          </p>
-        </div>
+        </section>
       </footer>
     </div>
   );

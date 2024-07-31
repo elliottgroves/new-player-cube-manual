@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-import { animate, spring } from 'motion';
 import './collapsible-scroll.css';
 
 export default function CollapsibleScroll({ title, children }) {
@@ -7,7 +6,7 @@ export default function CollapsibleScroll({ title, children }) {
 
   const toggleScrollOpen = useCallback(() => {
     setScrollOpen(!scrollOpen);
-  });
+  }, [scrollOpen]);
 
   return (
     <div className={'collapsible-scroll' + (scrollOpen ? ' open' : '')} onClick={toggleScrollOpen}>

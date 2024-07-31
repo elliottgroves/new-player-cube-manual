@@ -3,8 +3,7 @@ import AnimatedLayout from './AnimatedLayout.js';
 import PageHeaderCard from './PageHeaderCard.js';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowDown, MagicWand, Lightning, Crown, Scroll } from '@phosphor-icons/react';
-import CentaurCourser from './images/Centaur Courser.webp';
+import { MagicWand, Lightning, Crown, Scroll } from '@phosphor-icons/react';
 
 export default function InstantsPage() {
   return (

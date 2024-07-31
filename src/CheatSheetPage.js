@@ -1,7 +1,7 @@
 import './cheat-sheet-page.css';
 import AnimatedLayout from './AnimatedLayout.js';
 import { Link } from 'react-router-dom';
-import { ArrowBendRightDown, Info, DotOutline, Crown, Lightning } from '@phosphor-icons/react';
+import { ArrowBendRightDown, Crown, Lightning } from '@phosphor-icons/react';
 import t from './icons/t.svg';
 
 export default function CheatSheetPage() {
@@ -60,16 +60,15 @@ export default function CheatSheetPage() {
         <div className="combat-tips">
           <h3>Combat Reminders</h3>
           <ul>
-            <li>Creatures played this turn have <i>summoning sickness</i> and can't attack or activate <img src={t} className="symbol"/> tap abilities until your next turn</li>
+            <li>Creatures played this turn have <i>summoning sickness</i> and can't attack or activate <img src={t} alt="Tap symbol" className="symbol"/> tap abilities until your next turn</li>
             <li>Declare all attacking creatures at the same time by tapping them</li>
             <li>The defending player can block attacking creatures with their untapped creatures</li>
             <li>Blocked attackers fight their blockers, unblocked creatures damage the defending player</li>
-            <li>A creature that takes more damage than its toughness in one turn dies and is put in the graveyard</li>
-            <li>Multiple creatures can block one attacker - the attacking player picks the order the blockers take damage</li>
+            <li>Fighting creatures deal damage to each other equal to their power</li>
+            <li>A creature that takes more damage than its toughness in one turn dies and goes to the graveyard</li>
+            <li>Multiple creatures can block one attacker - the attacking player picks the order the blockers take damage, then all the creatures fight</li>
           </ul>
         </div>
-  
-        {/* combat animation here */}
   
         <Link to="/tutorial">
           <button className="large-nav-button">Full tutorial<Crown className="inline-icon" /></button>

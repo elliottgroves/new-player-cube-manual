@@ -19,6 +19,11 @@ html, body {
   overflow-x: clip;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,14 +36,24 @@ body {
 }
 
 p {
-  line-height: 1.5em;
+  margin-top: 1rem;
   margin-bottom: 2em;
+  line-height: 1.5em;
   letter-spacing: 0.03em;
   word-spacing: 0.03em;
 }
 
 a:has(button) {
   cursor: pointer;
+}
+
+a {
+  transition: text-shadow 0.3s ease;
+  will-change: text-shadow;
+}
+
+a:hover, a:focus {
+  text-shadow: 0 0 5px;
 }
 
 ul {
@@ -70,6 +85,10 @@ q {
   text-align: center;
   font-size: 1.3em;
   color: var(--text-color-alt);
+}
+
+figure {
+  margin: 0;
 }
 
 .card {

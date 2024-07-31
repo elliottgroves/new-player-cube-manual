@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import { useLocation } from 'react-router';
-import BraveKinDuo from './images/Brave-Kin Duo Art.webp';
 
 const layoutVariants = {
   initial: {
@@ -32,9 +30,6 @@ const layoutVariants = {
 }
 
 export default function AnimatedLayout({children}) {
-  const { pathname } = useLocation();
-  const parsedPathname = pathname ? pathname.replace('/', '').replace('-', ' ').toUpperCase() : 'Page';
-
   return (
     <div> 
       <motion.div

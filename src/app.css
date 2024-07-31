@@ -134,10 +134,10 @@ a:has(.large-nav-button):hover .inline-icon, .large-nav-button:focus .inline-ico
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  margin: 0 max(20%, 1rem) 2rem max(20%, 1rem);
+  margin: 0 1rem 2rem 1rem;
 }
 .card-figure img {
-  display: block;
+  margin-bottom: 1rem;
 }
 .card-figure figcaption {
   color: var(--text-color-alt);
@@ -146,49 +146,67 @@ a:has(.large-nav-button):hover .inline-icon, .large-nav-button:focus .inline-ico
 .main-footer {
   flex-grow: 1;
   margin-top: 5rem;
-  padding: 2rem 1rem 1rem 1rem;
-  background-color: var(--primary-color);
+  padding: 1.5rem 1rem 1rem 1rem;
+  background: var(--primary-color);
   color: white;
 }
-
+.main-footer .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem; 
+  color: var(--accent-color);
+}
+.main-footer .footer-logo img {
+  width: 70px;
+  display: block;
+}
 .main-footer .links-section, .main-footer .info-section {
   max-width: var(--desktop-width);
   margin: 0 auto 1rem auto;
 }
 
-.main-footer .info-section {
-  font-size: 0.9rem;
-}
-
-.main-footer h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.main-footer img {
-  opacity: 0.5;
-  filter: grayscale(1);
-  margin: auto;
-  width: 70px;
-  display: block;
-}
-
-.main-footer a {
-  color: var(--link-color);
-}
-
-.main-footer a:visited {
-  color: var(--visited-link-color);
-}
-
 .main-footer .links-section {
   display: flex;
   justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+.main-footer .links-section ul {
+  flex: 0 1 200px;
+  margin: 0;
+}
+.main-footer .links-section ul::before {
+  content: attr(title);
+  color: var(--accent-color);
+  font-size: 1rem;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.main-footer .links-section ul li {
+  padding: 0.5rem 0;
+}
+.main-footer .links-section a {
+  color: white; 
+  text-decoration: none;
 }
 
-.main-footer .links-section ul {
-  flex-shrink: 1;
-  margin: 0;
+.main-footer .info-section {
+  border-top: 1px solid var(--text-color-alt);
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.main-footer .info-section a {
+  color: var(--link-color);
+}
+.main-footer .info-section a:visited {
+  color: var(--visited-link-color);
+}
+
+.main-footer .copyright-info {
+  border-top: 1px solid var(--text-color-alt);
+  padding-top: 1rem;
+  text-align: center;
 }
 
 .scroll-tracker {
@@ -252,6 +270,9 @@ svg.inline-icon {
   display: inline;
   height: 1.2em;
   vertical-align: middle;
+}
+.note {
+  color: var(--text-color-alt);
 }
 
 .two-colors-reminder {
