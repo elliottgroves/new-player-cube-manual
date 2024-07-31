@@ -154,8 +154,9 @@ a:has(.large-nav-button):hover .inline-icon, .large-nav-button:focus .inline-ico
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem; 
-  color: var(--accent-color);
+  color: var(--bg-color);
+  max-width: var(--desktop-width);
+  margin: 0 auto 2rem auto;
 }
 .main-footer .footer-logo img {
   width: 70px;
