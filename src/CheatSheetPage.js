@@ -74,7 +74,7 @@ export default function CheatSheetPage() {
           <button className="large-nav-button">Full tutorial<Crown className="inline-icon" /></button>
         </Link>
         <Link to="/instants">
-          <button className="large-nav-button">Detailed instants rules<Lightning className="inline-icon" /></button>
+          <button className="large-nav-button">Instants rules<Lightning className="inline-icon" /></button>
         </Link>
       </figure>
     </AnimatedLayout>

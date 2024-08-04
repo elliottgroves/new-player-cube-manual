@@ -3,20 +3,17 @@
   grid-template-columns: 1fr 2fr;
   grid-gap: 1rem;
   margin: 0 auto 2rem auto;
-
+  align-items: start;
   max-width: 550px;
 }
 
 .grid-display {
   position: sticky;
-  top: 100px;
+  top: 90px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: min-content min-content min-content;
   grid-gap: 3px;
-  margin: auto;
-  width: 159px;
-  justify-items: center;
 }
 
 .grid-display .grid-card {
@@ -24,5 +21,10 @@
   width: 50px;
   aspect-ratio: 5/7;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
 }
 

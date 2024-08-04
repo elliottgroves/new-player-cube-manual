@@ -114,3 +114,16 @@
   color: var(--accent-color);
   margin-bottom: -1rem;
 }
+
+.tutorial-page .finale-wow {
+  --grad-one: purple;
+  --grad-two: orange;
+  font-size: 4rem;
+  font-weight: bold;
+  width: fit-content;
+  margin: 0 auto;
+  background: linear-gradient(90deg, var(--grad-one), var(--grad-two), var(--grad-one), var(--grad-two), var(--grad-one));
+  background-size: 200% 100%;
+  background-clip: text;
+  color: transparent;
+}

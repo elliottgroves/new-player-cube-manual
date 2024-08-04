@@ -25,8 +25,6 @@ const layoutVariants = {
 const heroVariants = {
   initial: {
     y: '-100vh',
-    transition: {
-    }
   },
   enter: {
     y: 0,

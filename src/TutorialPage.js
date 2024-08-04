@@ -3,6 +3,7 @@ import AnimatedLayout from './AnimatedLayout.js';
 import PageHeaderCard from './PageHeaderCard.js';
 import CollapsibleScroll from './CollapsibleScroll.js';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Info, Sword, Mountains, Stack, Ghost, Shield, Crown, Lightning, Scroll } from '@phosphor-icons/react';
 import t from './icons/t.svg';
 
@@ -160,7 +161,22 @@ export default function TutorialPage() {
           <button className="large-nav-button">Instants Rules<Lightning className="inline-icon" /></button>
         </Link>
 
-        <p><b>That's it!</b> Get out there and game!</p>
+        <motion.p 
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            visible: {
+              backgroundPosition: ['0 0', '100% 0'],
+              transition: {
+                duration: 2,
+                ease: 'linear',
+                repeat: Infinity
+              }
+            }
+          }}
+          className="finale-wow">Congrats!</motion.p>
+
+        <p><b>That's it!</b> Get out there and game. Good luck and have fun!</p>
   
         <Link to="/cheat-sheet">
           <button className="large-nav-button">Turn cheat sheet<Scroll className="inline-icon" /></button>
